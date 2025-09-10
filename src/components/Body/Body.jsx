@@ -20,7 +20,7 @@ const Body = () => {
     {
       id: "cakes-cupcakes",
       title: "Cakes & Cupcakes",
-      description: "Layered cakes and decorated cupcakes",
+      description: "Layered cakes and cupcakes",
       items: [
         "Chocolate Layer Cake",
         "Red Velvet Cupcakes",
