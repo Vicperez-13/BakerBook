@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryCard from "./CategoryCard";
+import PastryGallery from "./PastryGallery";
 
 const Body = () => {
   const categories = [
@@ -117,6 +118,15 @@ const Body = () => {
     },
   ];
 
+  // Local pastry images from assets (use string paths for Vite)
+  const pastryImages = [
+    "/src/assets/buns.JPG",
+    "/src/assets/chocoChips.JPG",
+    "/src/assets/Lemon_cooks.jpg",
+    "/src/assets/sour_dough-knife.jpg",
+    "/src/assets/sour_dough.jpg",
+  ];
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
@@ -129,11 +139,14 @@ const Body = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
         {categories.map((category) => (
           <CategoryCard key={category.id} category={category} />
         ))}
       </div>
+
+      {/* Pastry Gallery Slideshow */}
+      <PastryGallery pastries={pastryImages} />
     </div>
   );
 };
