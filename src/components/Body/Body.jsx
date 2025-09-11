@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CategoryCard from "./CategoryCard";
 import PastryGallery from "./PastryGallery";
+import ContactSection from "./ContactSection";
 
 const Body = () => {
   const categories = [
@@ -180,6 +181,19 @@ const Body = () => {
         </div>
       </div>
 
+      {/* Quote Section Indicator */}
+      <div className="relative flex justify-center py-4">
+        <div className="group">
+          <div className="relative bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 animate-pulse">
+            <img
+              src="/src/assets/tabbyCat.png"
+              alt="Quote section indicator"
+              className="w-6 h-6 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Enhanced Flow Indicator */}
       <div className="relative flex flex-col items-center justify-center py-6">
         {/* Flowing Background Effect */}
@@ -236,6 +250,28 @@ const Body = () => {
       <div id="pastry-gallery">
         <PastryGallery pastries={pastryImages} />
       </div>
+
+      {/* Gallery Section Indicator */}
+      <div className="relative flex justify-center py-8">
+        <div className="group">
+          <div className="relative bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 animate-bounce">
+            <img
+              src="/src/assets/tabbyCat.png"
+              alt="Gallery section indicator"
+              className="w-6 h-6 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
+            />
+          </div>
+          {/* Small text under gallery indicator */}
+          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+            <p className="text-xs font-medium text-amber-700 bg-white/70 px-2 py-1 rounded-full shadow-sm">
+              🍰 End of Gallery
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <ContactSection />
     </div>
   );
 };

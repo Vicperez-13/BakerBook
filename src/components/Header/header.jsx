@@ -48,9 +48,16 @@ function Header() {
               </a>
             </li>
             <li>
-              <a className="text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:scale-105 cursor-pointer">
+              <button
+                onClick={() => {
+                  const contactSection =
+                    document.querySelector("#contact-section");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:scale-105 cursor-pointer w-full text-left"
+              >
                 Contact
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -97,10 +104,17 @@ function Header() {
             </a>
           </li>
           <li>
-            <a className="relative px-4 py-2 text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer">
+            <button
+              onClick={() => {
+                const contactSection =
+                  document.querySelector("#contact-section");
+                contactSection?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="relative px-4 py-2 text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer"
+            >
               <span className="relative z-10">Contact</span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
