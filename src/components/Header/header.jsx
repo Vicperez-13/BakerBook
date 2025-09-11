@@ -27,16 +27,30 @@ function Header() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow "
           >
             <li>
-              <Link to="/">Home</Link>
+              <Link
+                to="/"
+                className="text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:scale-105"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/menu">Menu</Link>
+              <Link
+                to="/menu"
+                className="text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:scale-105"
+              >
+                Menu
+              </Link>
             </li>
             <li>
-              <a>About</a>
+              <a className="text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:scale-105 cursor-pointer">
+                About
+              </a>
             </li>
             <li>
-              <a>Contact</a>
+              <a className="text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:scale-105 cursor-pointer">
+                Contact
+              </a>
             </li>
           </ul>
         </div>
@@ -44,30 +58,49 @@ function Header() {
         {/* Logo - always visible */}
         <Link
           to="/"
-          className="text-xl font-bold text-amber-500 p-2 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg"
+          className="flex items-center text-xl font-bold text-amber-500 p-2 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg"
         >
+          <img
+            src="/src/assets/tabbyCat.png"
+            alt="Ava's Goodies Logo"
+            className="w-8 h-8 object-cover rounded-full mr-2"
+          />
           Ava's Goodies
         </Link>
       </div>
 
       {/* Desktop menu - centered */}
       <div className="navbar-center hidden md:flex">
-        <ul className="menu menu-horizontal px-1 gap-8">
+        <ul className="menu menu-horizontal px-1 gap-4">
           <li>
-            <Link to="/" className="text-amber-600 hover:text-primary">
-              Home
+            <Link
+              to="/"
+              className="relative px-4 py-2 text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:shadow-md hover:scale-105 hover:-rotate-1 group"
+            >
+              <span className="relative z-10">Home</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </li>
           <li>
-            <Link to="/menu" className="text-amber-600 hover:text-primary">
-              Menu
+            <Link
+              to="/menu"
+              className="relative px-4 py-2 text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:shadow-md hover:scale-105 hover:rotate-1 group"
+            >
+              <span className="relative z-10">Menu</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </li>
           <li>
-            <a className="text-amber-600 hover:text-primary">About</a>
+            <a className="relative px-4 py-2 text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:shadow-md hover:scale-105 hover:-rotate-1 group cursor-pointer">
+              <span className="relative z-10">About</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
           </li>
           <li>
-            <a className="text-amber-600 hover:text-primary">Contact</a>
+            <a className="relative px-4 py-2 text-amber-600 font-medium rounded-lg transition-all duration-300 hover:text-amber-800 hover:bg-amber-50 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer">
+              <span className="relative z-10">Contact</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
           </li>
         </ul>
       </div>
