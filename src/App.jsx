@@ -1,15 +1,23 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Menu from "./pages/Menu";
+import CategoryDetail from "./pages/CategoryDetail";
 import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <Body />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Body />} />
+          <Route path="/home" element={<Body />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu/:category" element={<CategoryDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

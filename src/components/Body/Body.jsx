@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CategoryCard from "./CategoryCard";
 import PastryGallery from "./PastryGallery";
 
@@ -139,10 +140,46 @@ const Body = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-        {categories.map((category) => (
-          <CategoryCard key={category.id} category={category} />
-        ))}
+      {/* Simplified Category Overview */}
+      <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 mb-12 shadow-lg">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-8">
+          {categories.map((category) => (
+            <div key={category.id} className="text-center group cursor-pointer">
+              <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-200">
+                {category.icon}
+              </div>
+              <h3 className="text-sm font-medium text-gray-700 group-hover:text-amber-600 transition-colors">
+                {category.title}
+              </h3>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <p className="text-gray-600 mb-6">
+            From fresh breads and pastries to decadent cakes and cookies -
+            explore our full menu of daily-baked goods
+          </p>
+          <Link
+            to="/menu"
+            className="inline-flex items-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <span>View Full Menu</span>
+            <svg
+              className="ml-2 w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </Link>
+        </div>
       </div>
 
       {/* Pastry Gallery Slideshow */}
