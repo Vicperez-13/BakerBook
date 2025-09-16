@@ -57,12 +57,9 @@ const Body = () => {
     return (
       <div className="relative py-8 flex justify-center">
         <div className="relative z-20 group animate-fade-in">
-          {/* Glowing Trail Effect */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400/20 via-yellow-400/30 to-amber-400/20 blur-lg animate-pulse"></div>
-
           {/* Interactive Cat Container */}
           <div
-            className="relative bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-2xl border-2 border-amber-200/60 group-hover:border-amber-400 transition-all duration-500 group-hover:scale-110 cursor-pointer"
+            className="relative bg-white/95 rounded-full p-4 shadow-lg border-2 border-amber-200 group-hover:border-amber-400 transition-all duration-500 group-hover:scale-105 cursor-pointer"
             onClick={onClick}
           >
             {/* Navigation Cat */}
@@ -91,7 +88,7 @@ const Body = () => {
 
           {/* Dynamic Section Label */}
           <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-            <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-amber-200/50 transition-all duration-300">
+            <div className="bg-white/90 px-4 py-2 rounded-full shadow-md border border-amber-200 transition-all duration-300">
               <p className="text-sm font-medium text-amber-700 flex items-center">
                 <span className="mr-2">{emoji}</span>
                 {label}

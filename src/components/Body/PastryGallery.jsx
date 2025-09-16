@@ -40,12 +40,6 @@ const PastryGallery = ({ pastries }) => {
 
   return (
     <div className="relative py-20 px-4 bg-gradient-to-b from-amber-50/30 to-yellow-50/30">
-      {/* Enhanced Background Elements */}
-      <div className="absolute top-12 left-8 w-32 h-32 bg-amber-200/15 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute top-32 right-12 w-24 h-24 bg-yellow-200/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-orange-200/15 rounded-full blur-lg animate-pulse"></div>
-      <div className="absolute bottom-32 right-1/3 w-16 h-16 bg-amber-300/10 rounded-full blur-md animate-pulse"></div>
-
       <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
         {/* Enhanced Header */}
         <div className="text-center mb-16 relative">
@@ -82,7 +76,6 @@ const PastryGallery = ({ pastries }) => {
                       className="relative group cursor-pointer"
                       onClick={() => setCurrent(prevIndex)}
                     >
-                      <div className="absolute -inset-1 bg-gradient-to-r from-amber-200/20 to-yellow-200/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                       <img
                         src={pastries[prevIndex]}
                         alt={`Previous pastry ${prevIndex + 1}`}
@@ -100,7 +93,7 @@ const PastryGallery = ({ pastries }) => {
               {/* Navigation Arrows */}
               <button
                 onClick={goPrev}
-                className="absolute -left-4 lg:-left-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/90 backdrop-blur-sm border-2 border-amber-200 rounded-full hover:bg-white hover:border-amber-400 hover:shadow-xl hover:scale-110 transition-all duration-300 group"
+                className="absolute -left-4 lg:-left-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/95 border-2 border-amber-200 rounded-full hover:bg-white hover:border-amber-400 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                 aria-label="Previous"
               >
                 <svg
@@ -120,7 +113,7 @@ const PastryGallery = ({ pastries }) => {
 
               <button
                 onClick={goNext}
-                className="absolute -right-4 lg:-right-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/90 backdrop-blur-sm border-2 border-amber-200 rounded-full hover:bg-white hover:border-amber-400 hover:shadow-xl hover:scale-110 transition-all duration-300 group"
+                className="absolute -right-4 lg:-right-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/95 border-2 border-amber-200 rounded-full hover:bg-white hover:border-amber-400 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                 aria-label="Next"
               >
                 <svg
@@ -140,9 +133,7 @@ const PastryGallery = ({ pastries }) => {
 
               {/* Main Image Container */}
               <div className="relative group">
-                <div className="absolute -inset-6 bg-gradient-to-r from-amber-200/30 via-yellow-200/30 to-amber-200/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
-
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-2xl">
+                <div className="relative bg-white/90 rounded-2xl p-4 shadow-lg">
                   <img
                     src={pastries[current]}
                     alt={pastryDetails[current]?.name}
@@ -157,7 +148,7 @@ const PastryGallery = ({ pastries }) => {
               </div>
 
               {/* Pastry Details Card */}
-              <div className="mt-6 bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-amber-200/50">
+              <div className="mt-6 bg-white/95 rounded-xl p-6 shadow-md border border-amber-200">
                 <h3 className="text-2xl font-bold text-amber-600 mb-2">
                   {pastryDetails[current]?.name}
                 </h3>
@@ -191,7 +182,6 @@ const PastryGallery = ({ pastries }) => {
                       className="relative group cursor-pointer"
                       onClick={() => setCurrent(nextIndex)}
                     >
-                      <div className="absolute -inset-1 bg-gradient-to-r from-amber-200/20 to-yellow-200/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                       <img
                         src={pastries[nextIndex]}
                         alt={`Next pastry ${nextIndex + 1}`}
@@ -218,15 +208,12 @@ const PastryGallery = ({ pastries }) => {
               aria-label={`View ${pastryDetails[idx]?.name}`}
             >
               <div className="relative">
-                {idx === current && (
-                  <div className="absolute -inset-2 bg-amber-400/40 rounded-full blur-sm animate-pulse"></div>
-                )}
                 <img
                   src="/src/assets/tabbyCat.png"
                   alt={pastryDetails[idx]?.name}
                   className={`relative w-10 h-10 rounded-full object-cover transition-all duration-300 ${
                     idx === current
-                      ? "border-3 border-amber-500 shadow-xl"
+                      ? "border-3 border-amber-500 shadow-lg"
                       : "border-2 border-gray-300 opacity-60 hover:opacity-80 hover:border-amber-300"
                   }`}
                 />
@@ -237,12 +224,12 @@ const PastryGallery = ({ pastries }) => {
 
         {/* Progress and Stats */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-center">
-          <div className="bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-amber-200/50">
+          <div className="bg-white/80 px-4 py-2 rounded-full shadow-md border border-amber-200">
             <span className="text-sm font-medium text-gray-600">
               Viewing {current + 1} of {total} delicious treats
             </span>
           </div>
-          <div className="bg-amber-100/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-amber-300/50">
+          <div className="bg-amber-100/80 px-4 py-2 rounded-full shadow-md border border-amber-300">
             <span className="text-sm font-medium text-amber-700">
               🍯 All baked fresh daily at 6 AM
             </span>

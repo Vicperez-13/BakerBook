@@ -3,14 +3,6 @@ import React from "react";
 const ContactSection = () => {
   return (
     <div id="contact-section" className="relative py-16 px-4">
-      {/* Background decorative elements - matching gallery style */}
-      <div className="absolute top-12 right-8 w-20 h-20 bg-amber-200/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute top-32 left-12 w-16 h-16 bg-yellow-200/30 rounded-full blur-lg"></div>
-      <div
-        className="absolute bottom-16 right-1/4 w-12 h-12 bg-orange-200/25 rounded-full blur-md animate-pulse"
-        style={{ animationDelay: "1s" }}
-      ></div>
-
       <div className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto">
         {/* Welcoming Header */}
         <div className="text-center mb-16 relative">
@@ -32,8 +24,7 @@ const ContactSection = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {/* Email Contact */}
             <div className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-amber-200/20 to-yellow-200/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-amber-200/50 hover:border-amber-400 transition-all duration-300 text-center">
+              <div className="relative bg-white/95 rounded-xl p-6 border border-amber-200 hover:border-amber-400 transition-all duration-300 text-center shadow-md">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-amber-100 rounded-full">
                     <svg
@@ -63,8 +54,7 @@ const ContactSection = () => {
 
             {/* Response Time */}
             <div className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-amber-200/20 to-yellow-200/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-amber-200/50 hover:border-amber-400 transition-all duration-300 text-center">
+              <div className="relative bg-white/95 rounded-xl p-6 border border-amber-200 hover:border-amber-400 transition-all duration-300 text-center shadow-md">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-amber-100 rounded-full">
                     <img
@@ -88,8 +78,7 @@ const ContactSection = () => {
 
             {/* Best Times */}
             <div className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-amber-200/20 to-yellow-200/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-amber-200/50 hover:border-amber-400 transition-all duration-300 text-center">
+              <div className="relative bg-white/95 rounded-xl p-6 border border-amber-200 hover:border-amber-400 transition-all duration-300 text-center shadow-md">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-amber-100 rounded-full">
                     <svg
@@ -124,8 +113,7 @@ const ContactSection = () => {
         {/* Message Form - More welcoming */}
         <div className="w-full max-w-2xl">
           <div className="relative group">
-            <div className="absolute -inset-3 bg-gradient-to-r from-amber-200/30 to-yellow-200/30 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-            <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-8 border-2 border-amber-200/60 hover:border-amber-300 transition-all duration-300">
+            <div className="relative bg-white/95 rounded-2xl p-8 border-2 border-amber-200 hover:border-amber-300 transition-all duration-300 shadow-lg">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-amber-600 mb-2 flex items-center justify-center">
                   <svg
