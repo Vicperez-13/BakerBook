@@ -29,7 +29,13 @@ function Header() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="navbar bg-gradient-to-r from-stone-600 via-amber-800 to-stone-700 shadow-lg py-6 px-8 w-full backdrop-blur-sm border-b border-amber-700/30">
+      <div
+        className="navbar shadow-lg py-6 px-8 w-full backdrop-blur-md border-b border-emerald-800/20"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(82, 101, 84, 0.9), rgba(107, 142, 123, 0.85), rgba(75, 95, 77, 0.9))",
+        }}
+      >
         {/* Mobile menu button + Logo */}
         <div className="navbar-start">
           <div className="dropdown">
@@ -56,7 +62,7 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:scale-105"
+                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105"
                 >
                   Home
                 </Link>
@@ -64,13 +70,13 @@ function Header() {
               <li>
                 <Link
                   to="/menu"
-                  className="text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:scale-105"
+                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105"
                 >
                   Menu
                 </Link>
               </li>
               <li>
-                <a className="text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:scale-105 cursor-pointer">
+                <a className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105 cursor-pointer">
                   About
                 </a>
               </li>
@@ -81,7 +87,7 @@ function Header() {
                       document.querySelector("#contact-section");
                     contactSection?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:scale-105 cursor-pointer w-full text-left bg-transparent border-none focus:outline-none focus:bg-amber-700/50 active:bg-amber-700/70"
+                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105 cursor-pointer w-full text-left bg-transparent border-none focus:outline-none focus:bg-emerald-600/40 active:bg-emerald-600/60"
                 >
                   Contact
                 </button>
@@ -92,7 +98,7 @@ function Header() {
           {/* Logo - always visible */}
           <Link
             to="/"
-            className="flex items-center text-2xl font-bold text-amber-100 p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white"
+            className="flex items-center text-2xl font-bold text-green-50 p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white"
           >
             <img
               src="/src/assets/tabbyCat.png"
@@ -109,25 +115,25 @@ function Header() {
             <li>
               <Link
                 to="/"
-                className="relative px-6 py-3 text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:shadow-md hover:scale-105 hover:-rotate-1 group"
+                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group"
               >
                 <span className="relative z-10">Home</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-700/30 to-stone-600/30 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </li>
             <li>
               <Link
                 to="/menu"
-                className="relative px-6 py-3 text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:shadow-md hover:scale-105 hover:rotate-1 group"
+                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:rotate-1 group"
               >
                 <span className="relative z-10">Menu</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-700/30 to-stone-600/30 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </li>
             <li>
-              <a className="relative px-6 py-3 text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:shadow-md hover:scale-105 hover:-rotate-1 group cursor-pointer">
+              <a className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group cursor-pointer">
                 <span className="relative z-10">About</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-700/30 to-stone-600/30 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </li>
             <li>
@@ -137,10 +143,10 @@ function Header() {
                     document.querySelector("#contact-section");
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="relative px-6 py-3 text-xl text-amber-100 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-700/50 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer bg-transparent border-none focus:outline-none focus:bg-amber-700/50 active:bg-amber-700/70"
+                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer bg-transparent border-none focus:outline-none focus:bg-emerald-600/30 active:bg-emerald-600/50"
               >
                 <span className="relative z-10">Contact</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-700/30 to-stone-600/30 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </li>
           </ul>
