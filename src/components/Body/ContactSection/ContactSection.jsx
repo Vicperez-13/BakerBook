@@ -6,14 +6,14 @@ const ContactSection = () => {
       <div className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto">
         {/* Welcoming Header */}
         <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-600 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-stone-600 mb-4">
             Let's Chat Over Coffee & Pastries
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
             Whether you're dreaming of a custom birthday cake, planning a cozy
             event, or just want to share how much you loved our croissants -
             we're all ears!
-            <span className="text-amber-600 font-medium">
+            <span className="text-stone-600 font-medium">
               Every conversation starts with kindness.
             </span>
           </p>
@@ -24,11 +24,11 @@ const ContactSection = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {/* Email Contact */}
             <div className="relative group">
-              <div className="relative bg-white/95 rounded-xl p-6 border border-amber-200 hover:border-amber-400 transition-all duration-300 text-center shadow-md">
+              <div className="relative bg-stone-50/95 rounded-xl p-6 border border-stone-300 hover:border-stone-400 transition-all duration-300 text-center shadow-md">
                 <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-amber-100 rounded-full">
+                  <div className="p-3 bg-stone-100 rounded-full">
                     <svg
-                      className="w-8 h-8 text-amber-600"
+                      className="w-8 h-8 text-stone-600"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -37,15 +37,15 @@ const ContactSection = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-amber-600 mb-2">
+                <h3 className="text-lg font-bold text-stone-600 mb-2">
                   Email Us
                 </h3>
-                <p className="text-gray-600 text-sm mb-3">
+                <p className="text-stone-600 text-sm mb-3">
                   Drop us a line anytime!
                 </p>
                 <a
                   href="mailto:ava3065@icloud.com"
-                  className="text-amber-700 hover:text-amber-800 transition-colors duration-200 font-medium break-all"
+                  className="text-stone-700 hover:text-stone-800 transition-colors duration-200 font-medium break-all"
                 >
                   ava3065@icloud.com
                 </a>
@@ -54,9 +54,9 @@ const ContactSection = () => {
 
             {/* Response Time */}
             <div className="relative group">
-              <div className="relative bg-white/95 rounded-xl p-6 border border-amber-200 hover:border-amber-400 transition-all duration-300 text-center shadow-md">
+              <div className="relative bg-stone-50/95 rounded-xl p-6 border border-stone-300 hover:border-stone-400 transition-all duration-300 text-center shadow-md">
                 <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-amber-100 rounded-full">
+                  <div className="p-3 bg-stone-100 rounded-full">
                     <img
                       src="/src/assets/tabbyCat.png"
                       alt="Quick Response"
@@ -64,13 +64,13 @@ const ContactSection = () => {
                     />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-amber-600 mb-2">
+                <h3 className="text-lg font-bold text-stone-600 mb-2">
                   Quick Response
                 </h3>
-                <p className="text-gray-600 text-sm mb-3">
+                <p className="text-stone-600 text-sm mb-3">
                   We're pretty speedy!
                 </p>
-                <p className="text-amber-700 font-medium">
+                <p className="text-stone-700 font-medium">
                   💝 Usually within 24 hours
                 </p>
               </div>
@@ -78,11 +78,11 @@ const ContactSection = () => {
 
             {/* Best Times */}
             <div className="relative group">
-              <div className="relative bg-white/95 rounded-xl p-6 border border-amber-200 hover:border-amber-400 transition-all duration-300 text-center shadow-md">
+              <div className="relative bg-stone-50/95 rounded-xl p-6 border border-stone-300 hover:border-stone-400 transition-all duration-300 text-center shadow-md">
                 <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-amber-100 rounded-full">
+                  <div className="p-3 bg-stone-100 rounded-full">
                     <svg
-                      className="w-8 h-8 text-amber-600"
+                      className="w-8 h-8 text-stone-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -96,13 +96,13 @@ const ContactSection = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-amber-600 mb-2">
+                <h3 className="text-lg font-bold text-stone-600 mb-2">
                   Best Times
                 </h3>
-                <p className="text-gray-600 text-sm mb-3">
+                <p className="text-stone-600 text-sm mb-3">
                   When we're most chatty
                 </p>
-                <p className="text-amber-700 font-medium">
+                <p className="text-stone-700 font-medium">
                   ☀️ Mornings & Afternoons
                 </p>
               </div>
@@ -113,9 +113,9 @@ const ContactSection = () => {
         {/* Message Form - More welcoming */}
         <div className="w-full max-w-2xl">
           <div className="relative group">
-            <div className="relative bg-white/95 rounded-2xl p-8 border-2 border-amber-200 hover:border-amber-300 transition-all duration-300 shadow-lg">
+            <div className="relative bg-stone-50/95 rounded-2xl p-8 border-2 border-stone-300 hover:border-stone-400 transition-all duration-300 shadow-lg">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-amber-600 mb-2 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-stone-600 mb-2 flex items-center justify-center">
                   <svg
                     className="w-6 h-6 mr-3"
                     fill="none"
@@ -131,7 +131,7 @@ const ContactSection = () => {
                   </svg>
                   Share Your Sweet Story
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-stone-600">
                   Tell us what's on your mind - we love hearing from you!
                 </p>
               </div>
@@ -142,19 +142,19 @@ const ContactSection = () => {
                     <input
                       type="text"
                       placeholder="Your lovely name"
-                      className="w-full px-4 py-3 bg-white/95 border-2 border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-200 hover:border-amber-300"
+                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       placeholder="your.email@example.com"
-                      className="w-full px-4 py-3 bg-white/95 border-2 border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-200 hover:border-amber-300"
+                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300"
                     />
                   </div>
                 </div>
 
-                <select className="w-full px-4 py-3 bg-white/95 border-2 border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-200 hover:border-amber-300">
+                <select className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300">
                   <option value="">How can we make your day sweeter?</option>
                   <option value="general">Just saying hello! 👋</option>
                   <option value="order">Custom order inquiry 🎂</option>
@@ -167,12 +167,15 @@ const ContactSection = () => {
                 <textarea
                   rows={5}
                   placeholder="Share your thoughts, dreams, or pastry wishes... We're excited to hear from you! ✨"
-                  className="w-full px-4 py-3 bg-white/95 border-2 border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-200 resize-vertical hover:border-amber-300"
+                  className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 resize-vertical hover:border-stone-300"
                 ></textarea>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center group text-lg"
+                  className="w-full text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center group text-lg"
+                  style={{
+                    background: "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))"
+                  }}
                 >
                   <svg
                     className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-200"
@@ -196,11 +199,11 @@ const ContactSection = () => {
 
         {/* Closing Message */}
         <div className="text-center mt-12">
-          <p className="text-gray-600 italic max-w-md mx-auto">
+          <p className="text-stone-600 italic max-w-md mx-auto">
             "Every message brings us joy - just like every pastry we bake brings
             sweetness to your day."
           </p>
-          <p className="text-amber-600 font-medium mt-2">
+          <p className="text-stone-600 font-medium mt-2">
             - The Ava's Goodies Team 🐱
           </p>
         </div>

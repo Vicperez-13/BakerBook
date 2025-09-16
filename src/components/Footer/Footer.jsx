@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright Info */}
           <div className="text-center md:text-left">
-            <p className="text-amber-600 text-sm">
+            <p className="text-stone-600 text-sm">
               © 2025 Victor Morales Perez. All rights reserved.
             </p>
           </div>
@@ -18,7 +18,7 @@ const Footer = () => {
               href="https://github.com/Vicperez-13"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-amber-600 hover:text-amber-700 transition-colors duration-200"
+              className="inline-flex items-center text-stone-600 hover:text-stone-700 transition-colors duration-200"
             >
               {/* GitHub Icon */}
               <svg
@@ -36,7 +36,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/vicperez13"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-amber-600 hover:text-amber-700 transition-colors duration-200"
+              className="inline-flex items-center text-stone-600 hover:text-stone-700 transition-colors duration-200"
             >
               {/* LinkedIn Icon */}
               <svg

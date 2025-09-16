@@ -39,17 +39,17 @@ const PastryGallery = ({ pastries }) => {
   ];
 
   return (
-    <div className="relative py-20 px-4 bg-gradient-to-b from-amber-50/30 to-yellow-50/30">
+    <div className="relative py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
         {/* Enhanced Header */}
         <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-600 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-stone-600 mb-4">
             Handcrafted Daily Delights
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
             Each pastry is lovingly crafted by our skilled bakers using
             time-honored techniques and the finest ingredients.
-            <span className="text-amber-600 font-medium">
+            <span className="text-stone-600 font-medium">
               {" "}
               Every bite tells a story of passion and dedication.
             </span>
@@ -61,7 +61,7 @@ const PastryGallery = ({ pastries }) => {
           <div className="grid lg:grid-cols-3 gap-8 items-center">
             {/* Left Side - Previous Images Preview */}
             <div className="hidden lg:block space-y-4">
-              <h3 className="text-lg font-semibold text-amber-600 mb-4 text-center">
+              <h3 className="text-lg font-semibold text-stone-600 mb-4 text-center">
                 Previous Delights
               </h3>
               <div className="space-y-3">
@@ -93,11 +93,11 @@ const PastryGallery = ({ pastries }) => {
               {/* Navigation Arrows */}
               <button
                 onClick={goPrev}
-                className="absolute -left-4 lg:-left-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/95 border-2 border-amber-200 rounded-full hover:bg-white hover:border-amber-400 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
+                className="absolute -left-4 lg:-left-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-stone-50/95 border-2 border-stone-300 rounded-full hover:bg-stone-50 hover:border-stone-400 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                 aria-label="Previous"
               >
                 <svg
-                  className="w-6 h-6 text-amber-600 group-hover:text-amber-700"
+                  className="w-6 h-6 text-stone-600 group-hover:text-stone-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -113,11 +113,11 @@ const PastryGallery = ({ pastries }) => {
 
               <button
                 onClick={goNext}
-                className="absolute -right-4 lg:-right-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/95 border-2 border-amber-200 rounded-full hover:bg-white hover:border-amber-400 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
+                className="absolute -right-4 lg:-right-12 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-stone-50/95 border-2 border-stone-300 rounded-full hover:bg-stone-50 hover:border-stone-400 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                 aria-label="Next"
               >
                 <svg
-                  className="w-6 h-6 text-amber-600 group-hover:text-amber-700"
+                  className="w-6 h-6 text-stone-600 group-hover:text-stone-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -133,7 +133,7 @@ const PastryGallery = ({ pastries }) => {
 
               {/* Main Image Container */}
               <div className="relative group">
-                <div className="relative bg-white/90 rounded-2xl p-4 shadow-lg">
+                <div className="relative bg-stone-50/90 rounded-2xl p-4 shadow-lg">
                   <img
                     src={pastries[current]}
                     alt={pastryDetails[current]?.name}
@@ -141,25 +141,31 @@ const PastryGallery = ({ pastries }) => {
                   />
 
                   {/* Floating Quality Badge */}
-                  <div className="absolute top-6 right-6 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg">
+                  <div
+                    className="absolute top-6 right-6 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg"
+                    style={{
+                      background:
+                        "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
+                    }}
+                  >
                     ✨ Premium Quality
                   </div>
                 </div>
               </div>
 
               {/* Pastry Details Card */}
-              <div className="mt-6 bg-white/95 rounded-xl p-6 shadow-md border border-amber-200">
-                <h3 className="text-2xl font-bold text-amber-600 mb-2">
+              <div className="mt-6 bg-stone-50/95 rounded-xl p-6 shadow-md border border-stone-300">
+                <h3 className="text-2xl font-bold text-stone-600 mb-2">
                   {pastryDetails[current]?.name}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-stone-600 mb-4 leading-relaxed">
                   {pastryDetails[current]?.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {pastryDetails[current]?.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium"
+                      className="bg-stone-100 text-stone-700 px-3 py-1 rounded-full text-sm font-medium"
                     >
                       {tag}
                     </span>
@@ -170,7 +176,7 @@ const PastryGallery = ({ pastries }) => {
 
             {/* Right Side - Next Images Preview */}
             <div className="hidden lg:block space-y-4">
-              <h3 className="text-lg font-semibold text-amber-600 mb-4 text-center">
+              <h3 className="text-lg font-semibold text-stone-600 mb-4 text-center">
                 Coming Next
               </h3>
               <div className="space-y-3">
@@ -213,8 +219,8 @@ const PastryGallery = ({ pastries }) => {
                   alt={pastryDetails[idx]?.name}
                   className={`relative w-10 h-10 rounded-full object-cover transition-all duration-300 ${
                     idx === current
-                      ? "border-3 border-amber-500 shadow-lg"
-                      : "border-2 border-gray-300 opacity-60 hover:opacity-80 hover:border-amber-300"
+                      ? "border-3 border-stone-500 shadow-lg"
+                      : "border-2 border-gray-300 opacity-60 hover:opacity-80 hover:border-stone-400"
                   }`}
                 />
               </div>
@@ -224,13 +230,13 @@ const PastryGallery = ({ pastries }) => {
 
         {/* Progress and Stats */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-center">
-          <div className="bg-white/80 px-4 py-2 rounded-full shadow-md border border-amber-200">
-            <span className="text-sm font-medium text-gray-600">
+          <div className="bg-stone-50/80 px-4 py-2 rounded-full shadow-md border border-stone-300">
+            <span className="text-sm font-medium text-stone-600">
               Viewing {current + 1} of {total} delicious treats
             </span>
           </div>
-          <div className="bg-amber-100/80 px-4 py-2 rounded-full shadow-md border border-amber-300">
-            <span className="text-sm font-medium text-amber-700">
+          <div className="bg-stone-100/80 px-4 py-2 rounded-full shadow-md border border-stone-400">
+            <span className="text-sm font-medium text-stone-600">
               🍯 All baked fresh daily at 6 AM
             </span>
           </div>
