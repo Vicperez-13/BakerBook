@@ -248,22 +248,6 @@ const PastryGallery = ({ pastries }) => {
             </span>
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-amber-400/50 to-yellow-400/50 rounded-xl blur opacity-75 group-hover:opacity-100 transition-all duration-300"></div>
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-amber-200/60">
-              <p className="text-lg text-gray-700 mb-4">
-                Craving something special? Our talented bakers can create custom
-                orders just for you!
-              </p>
-              <button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                Order Your Favorites 🎂
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

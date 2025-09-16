@@ -1,10 +1,124 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CategoryCard from "./CategoryCard";
 import PastryGallery from "./PastryGallery";
 import ContactSection from "./ContactSection";
 
 const Body = () => {
+  const [visibleNavigators, setVisibleNavigators] = useState({
+    afterHero: false,
+    afterGallery: false,
+    beforeContact: false,
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Check if we should show the navigator after hero section
+      const heroSection = document.querySelector(".hero-section");
+      const gallerySection = document.querySelector("#pastry-gallery");
+      const contactSection = document.querySelector("#contact-section");
+
+      if (heroSection && gallerySection && contactSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        const galleryTop = gallerySection.offsetTop;
+        const galleryBottom =
+          gallerySection.offsetTop + gallerySection.offsetHeight;
+        const contactTop = contactSection.offsetTop;
+
+        setVisibleNavigators({
+          afterHero:
+            scrollY > heroBottom - windowHeight && scrollY < galleryTop + 100,
+          afterGallery:
+            scrollY > galleryBottom - windowHeight / 2 &&
+            scrollY < contactTop - 100,
+          beforeContact: scrollY > contactTop - 200,
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const NavigatorComponent = ({
+    isVisible,
+    label,
+    emoji,
+    onClick,
+    arrowDirection = "down",
+  }) => {
+    if (!isVisible) return null;
+
+    return (
+      <div className="relative py-8 flex justify-center">
+        <div className="relative z-20 group animate-fade-in">
+          {/* Glowing Trail Effect */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400/20 via-yellow-400/30 to-amber-400/20 blur-lg animate-pulse"></div>
+
+          {/* Interactive Cat Container */}
+          <div
+            className="relative bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-2xl border-2 border-amber-200/60 group-hover:border-amber-400 transition-all duration-500 group-hover:scale-110 cursor-pointer"
+            onClick={onClick}
+          >
+            {/* Navigation Cat */}
+            <img
+              src="/src/assets/tabbyCat.png"
+              alt="Navigate to next section"
+              className="w-12 h-12 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
+            />
+
+            {/* Movement Indicator Dots */}
+            <div className="absolute -top-2 -right-1 flex space-x-1">
+              <div
+                className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                style={{ animationDelay: "0s" }}
+              ></div>
+              <div
+                className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                style={{ animationDelay: "0.2s" }}
+              ></div>
+              <div
+                className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                style={{ animationDelay: "0.4s" }}
+              ></div>
+            </div>
+          </div>
+
+          {/* Dynamic Section Label */}
+          <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+            <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-amber-200/50 transition-all duration-300">
+              <p className="text-sm font-medium text-amber-700 flex items-center">
+                <span className="mr-2">{emoji}</span>
+                {label}
+                <svg
+                  className="ml-2 w-4 h-4 animate-bounce"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={
+                      arrowDirection === "up"
+                        ? "M5 10l7-7m0 0l7 7m-7-7v18"
+                        : "M19 14l-7 7m0 0l-7-7m7 7V3"
+                    }
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
   const categories = [
     {
       id: "breads",
@@ -132,7 +246,7 @@ const Body = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Hero Section with Images and Quote */}
-      <div className="relative bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 mb-12 shadow-lg min-h-[500px] overflow-hidden">
+      <div className="hero-section relative bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 mb-12 shadow-lg min-h-[500px] overflow-hidden">
         {/* Ava Image - Right Side */}
         <div className="absolute top-4 right-4 z-10">
           <img
@@ -181,101 +295,46 @@ const Body = () => {
         </div>
       </div>
 
-      {/* Navigation Connection Line with Moving Tabby Cat */}
-      <div className="relative py-12">
-        {/* Smooth Connection Line */}
-        <div className="relative flex flex-col items-center justify-center min-h-[200px]">
-          {/* Elegant Background Path */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-50/20 to-transparent"></div>
-
-          {/* Main Connection Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-amber-300/30 via-amber-400/50 to-amber-300/30"></div>
-
-          {/* Animated Path Particles */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full overflow-hidden">
-            <div className="w-full h-4 bg-gradient-to-b from-transparent via-amber-500 to-transparent animate-pulse"></div>
-          </div>
-
-          {/* Dynamic Moving Tabby Cat Navigator */}
-          <div className="relative z-20 group">
-            {/* Glowing Trail Effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400/20 via-yellow-400/30 to-amber-400/20 blur-lg animate-pulse"></div>
-
-            {/* Interactive Cat Container */}
-            <div
-              className="relative bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-2xl border-2 border-amber-200/60 group-hover:border-amber-400 transition-all duration-500 group-hover:scale-110 cursor-pointer"
-              onClick={() => {
-                const gallery = document.querySelector("#pastry-gallery");
-                gallery?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              {/* Navigation Cat */}
-              <img
-                src="/src/assets/tabbyCat.png"
-                alt="Navigate through sections"
-                className="w-12 h-12 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
-              />
-
-              {/* Movement Indicator Dots */}
-              <div className="absolute -top-2 -right-1 flex space-x-1">
-                <div
-                  className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
-                  style={{ animationDelay: "0s" }}
-                ></div>
-                <div
-                  className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
-                  style={{ animationDelay: "0.2s" }}
-                ></div>
-                <div
-                  className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
-                  style={{ animationDelay: "0.4s" }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Dynamic Section Label */}
-            <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-              <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-amber-200/50">
-                <p className="text-sm font-medium text-amber-700 flex items-center">
-                  <span className="mr-2">🍯</span>
-                  Discover Our Pastries
-                  <svg
-                    className="ml-2 w-4 h-4 animate-bounce"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                    />
-                  </svg>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Flowing Side Accents */}
-          <div
-            className="absolute top-8 left-1/4 w-3 h-3 bg-amber-400/40 rounded-full animate-ping"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute bottom-8 right-1/4 w-2 h-2 bg-yellow-400/40 rounded-full animate-ping"
-            style={{ animationDelay: "2s" }}
-          ></div>
-        </div>
-      </div>
+      {/* Navigator: After Hero - Leads to Gallery */}
+      <NavigatorComponent
+        isVisible={visibleNavigators.afterHero}
+        label="Discover Our Pastries"
+        emoji="🍯"
+        onClick={() => {
+          const gallery = document.querySelector("#pastry-gallery");
+          gallery?.scrollIntoView({ behavior: "smooth" });
+        }}
+      />
 
       {/* Pastry Gallery Slideshow */}
       <div id="pastry-gallery">
         <PastryGallery pastries={pastryImages} />
       </div>
 
+      {/* Navigator: After Gallery - Leads to Contact */}
+      <NavigatorComponent
+        isVisible={visibleNavigators.afterGallery}
+        label="Get In Touch"
+        emoji="💬"
+        onClick={() => {
+          const contact = document.querySelector("#contact-section");
+          contact?.scrollIntoView({ behavior: "smooth" });
+        }}
+      />
+
       {/* Contact Section */}
       <ContactSection />
+
+      {/* Navigator: At Bottom - Back to Top */}
+      <NavigatorComponent
+        isVisible={true}
+        label="Back to Top"
+        emoji="⬆️"
+        arrowDirection="up"
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      />
     </div>
   );
 };
