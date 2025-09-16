@@ -105,7 +105,7 @@ function Header() {
               alt="Ava's Goodies Logo"
               className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-full mr-4 md:mr-6"
             />
-            Ava's Goodies
+            Ava's Tweats
           </Link>
         </div>
 
