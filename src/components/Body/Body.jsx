@@ -181,67 +181,90 @@ const Body = () => {
         </div>
       </div>
 
-      {/* Quote Section Indicator */}
-      <div className="relative flex justify-center py-4">
-        <div className="group">
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 animate-pulse">
-            <img
-              src="/src/assets/tabbyCat.png"
-              alt="Quote section indicator"
-              className="w-6 h-6 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
-            />
-          </div>
-        </div>
-      </div>
+      {/* Navigation Connection Line with Moving Tabby Cat */}
+      <div className="relative py-12">
+        {/* Smooth Connection Line */}
+        <div className="relative flex flex-col items-center justify-center min-h-[200px]">
+          {/* Elegant Background Path */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-50/20 to-transparent"></div>
 
-      {/* Enhanced Flow Indicator */}
-      <div className="relative flex flex-col items-center justify-center py-6">
-        {/* Flowing Background Effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-50/30 to-transparent blur-xl"></div>
+          {/* Main Connection Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-amber-300/30 via-amber-400/50 to-amber-300/30"></div>
 
-        {/* Animated Connection Line */}
-        <div className="absolute w-1 h-full bg-gradient-to-b from-amber-300/50 via-amber-400 to-amber-300/50 animate-pulse"></div>
-
-        {/* Interactive Tabby Cat Hub */}
-        <div
-          className="relative z-10 group cursor-pointer"
-          onClick={() => {
-            const gallery = document.querySelector("#pastry-gallery");
-            gallery?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          {/* Pulsing Ring Around Cat */}
-          <div className="absolute inset-0 rounded-full bg-amber-300/20 animate-ping"></div>
-          <div className="absolute inset-0 rounded-full bg-amber-400/30 animate-pulse"></div>
-
-          {/* Cat Container */}
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 animate-bounce">
-            <img
-              src="/src/assets/tabbyCat.png"
-              alt="Continue to pastries"
-              className="w-16 h-16 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
-            />
+          {/* Animated Path Particles */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full overflow-hidden">
+            <div className="w-full h-4 bg-gradient-to-b from-transparent via-amber-500 to-transparent animate-pulse"></div>
           </div>
 
-          {/* Floating Text */}
-          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-            <p className="text-xs font-medium text-amber-700 bg-white/70 px-3 py-1 rounded-full shadow-sm animate-pulse">
-              🍯 See our goodies below
-            </p>
-          </div>
-        </div>
+          {/* Dynamic Moving Tabby Cat Navigator */}
+          <div className="relative z-20 group">
+            {/* Glowing Trail Effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400/20 via-yellow-400/30 to-amber-400/20 blur-lg animate-pulse"></div>
 
-        {/* Animated Flow Particles */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
+            {/* Interactive Cat Container */}
+            <div
+              className="relative bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-2xl border-2 border-amber-200/60 group-hover:border-amber-400 transition-all duration-500 group-hover:scale-110 cursor-pointer"
+              onClick={() => {
+                const gallery = document.querySelector("#pastry-gallery");
+                gallery?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              {/* Navigation Cat */}
+              <img
+                src="/src/assets/tabbyCat.png"
+                alt="Navigate through sections"
+                className="w-12 h-12 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
+              />
+
+              {/* Movement Indicator Dots */}
+              <div className="absolute -top-2 -right-1 flex space-x-1">
+                <div
+                  className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                  style={{ animationDelay: "0s" }}
+                ></div>
+                <div
+                  className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                  style={{ animationDelay: "0.2s" }}
+                ></div>
+                <div
+                  className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                  style={{ animationDelay: "0.4s" }}
+                ></div>
+              </div>
+            </div>
+
+            {/* Dynamic Section Label */}
+            <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+              <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-amber-200/50">
+                <p className="text-sm font-medium text-amber-700 flex items-center">
+                  <span className="mr-2">🍯</span>
+                  Discover Our Pastries
+                  <svg
+                    className="ml-2 w-4 h-4 animate-bounce"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                  </svg>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Flowing Side Accents */}
           <div
-            className="w-2 h-2 bg-amber-400 rounded-full animate-bounce"
-            style={{ animationDelay: "0s" }}
+            className="absolute top-8 left-1/4 w-3 h-3 bg-amber-400/40 rounded-full animate-ping"
+            style={{ animationDelay: "1s" }}
           ></div>
-        </div>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
           <div
-            className="w-2 h-2 bg-amber-400 rounded-full animate-bounce"
-            style={{ animationDelay: "0.5s" }}
+            className="absolute bottom-8 right-1/4 w-2 h-2 bg-yellow-400/40 rounded-full animate-ping"
+            style={{ animationDelay: "2s" }}
           ></div>
         </div>
       </div>
@@ -249,25 +272,6 @@ const Body = () => {
       {/* Pastry Gallery Slideshow */}
       <div id="pastry-gallery">
         <PastryGallery pastries={pastryImages} />
-      </div>
-
-      {/* Gallery Section Indicator */}
-      <div className="relative flex justify-center py-8">
-        <div className="group">
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 animate-bounce">
-            <img
-              src="/src/assets/tabbyCat.png"
-              alt="Gallery section indicator"
-              className="w-6 h-6 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
-            />
-          </div>
-          {/* Small text under gallery indicator */}
-          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-            <p className="text-xs font-medium text-amber-700 bg-white/70 px-2 py-1 rounded-full shadow-sm">
-              🍰 End of Gallery
-            </p>
-          </div>
-        </div>
       </div>
 
       {/* Contact Section */}
