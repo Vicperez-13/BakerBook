@@ -14,16 +14,6 @@ const ContactSection = () => {
       <div className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto">
         {/* Welcoming Header */}
         <div className="text-center mb-16 relative">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute -inset-2 bg-amber-400/30 rounded-full blur-lg animate-pulse"></div>
-              <img
-                src="/src/assets/tabbyCat.png"
-                alt="Welcome to Contact"
-                className="relative w-12 h-12 object-cover rounded-full animate-bounce"
-              />
-            </div>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-amber-600 mb-4">
             Let's Chat Over Coffee & Pastries
           </h2>

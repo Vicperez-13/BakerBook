@@ -49,16 +49,6 @@ const PastryGallery = ({ pastries }) => {
       <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
         {/* Enhanced Header */}
         <div className="text-center mb-16 relative">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute -inset-3 bg-amber-400/20 rounded-full blur-lg animate-pulse"></div>
-              <img
-                src="/src/assets/tabbyCat.png"
-                alt="Our Pastries"
-                className="relative w-14 h-14 object-cover rounded-full animate-bounce border-3 border-white shadow-xl"
-              />
-            </div>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-amber-600 mb-4">
             Handcrafted Daily Delights
           </h2>
