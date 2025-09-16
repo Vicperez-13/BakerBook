@@ -6,17 +6,14 @@ const ContactSection = () => {
       <div className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto">
         {/* Welcoming Header */}
         <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-600 mb-4">
-            Let's Chat Over Coffee & Pastries
-          </h2>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            Whether you're dreaming of a custom birthday cake, planning a cozy
-            event, or just want to share how much you loved our croissants -
-            we're all ears!
+          <h2 className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
+            Lets chat: Whether you're dreaming of a custom birthday cake,
+            planning a cozy event, or just want to share how much you loved our
+            croissants - we're all ears!
             <span className="text-stone-600 font-medium">
               Every conversation starts with kindness.
             </span>
-          </p>
+          </h2>
         </div>
 
         {/* Contact Methods - Better organized */}

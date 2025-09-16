@@ -9,61 +9,16 @@ const PastryGallery = ({ pastries }) => {
   const goNext = () =>
     setCurrent((prev) => (prev === total - 1 ? 0 : prev + 1));
 
-  // Pastry details for each image
-  const pastryDetails = [
-    {
-      name: "Golden Butter Buns",
-      description: "Soft, pillowy buns with a perfect golden crust",
-      tags: ["Fresh Daily", "Customer Favorite"],
-    },
-    {
-      name: "Chocolate Chip Cookies",
-      description: "Crispy edges, chewy center, loaded with premium chocolate",
-      tags: ["Made to Order", "Gluten-Free Option"],
-    },
-    {
-      name: "Lemon Delights",
-      description: "Zesty lemon cookies with a sweet powdered sugar finish",
-      tags: ["Seasonal Special", "Light & Citrusy"],
-    },
-    {
-      name: "Artisan Sourdough",
-      description: "Hand-crafted sourdough with a perfect crust and airy crumb",
-      tags: ["24hr Ferment", "Organic Flour"],
-    },
-    {
-      name: "Classic Sourdough Loaf",
-      description: "Traditional sourdough with authentic tang and texture",
-      tags: ["Heritage Recipe", "No Preservatives"],
-    },
-  ];
-
   return (
     <div className="relative py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
         {/* Enhanced Header */}
-        <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-600 mb-4">
-            Handcrafted Daily Delights
-          </h2>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            Each pastry is lovingly crafted by our skilled bakers using
-            time-honored techniques and the finest ingredients.
-            <span className="text-stone-600 font-medium">
-              {" "}
-              Every bite tells a story of passion and dedication.
-            </span>
-          </p>
-        </div>
-
+        <div className="text-center mb-16 relative"></div>
         {/* Main Gallery Section - Three Column Layout */}
         <div className="relative w-full max-w-6xl">
           <div className="grid lg:grid-cols-3 gap-8 items-center">
             {/* Left Side - Previous Images Preview */}
             <div className="hidden lg:block space-y-4">
-              <h3 className="text-lg font-semibold text-stone-600 mb-4 text-center">
-                Previous Delights
-              </h3>
               <div className="space-y-3">
                 {[...Array(2)].map((_, idx) => {
                   const prevIndex =
@@ -136,49 +91,15 @@ const PastryGallery = ({ pastries }) => {
                 <div className="relative bg-stone-50/90 rounded-2xl p-4 shadow-lg">
                   <img
                     src={pastries[current]}
-                    alt={pastryDetails[current]?.name}
+                    alt={`Pastry ${current + 1}`}
                     className="w-full h-80 md:h-96 object-cover rounded-xl shadow-lg"
                   />
-
-                  {/* Floating Quality Badge */}
-                  <div
-                    className="absolute top-6 right-6 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg"
-                    style={{
-                      background:
-                        "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
-                    }}
-                  >
-                    ✨ Premium Quality
-                  </div>
-                </div>
-              </div>
-
-              {/* Pastry Details Card */}
-              <div className="mt-6 bg-stone-50/95 rounded-xl p-6 shadow-md border border-stone-300">
-                <h3 className="text-2xl font-bold text-stone-600 mb-2">
-                  {pastryDetails[current]?.name}
-                </h3>
-                <p className="text-stone-600 mb-4 leading-relaxed">
-                  {pastryDetails[current]?.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {pastryDetails[current]?.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-stone-100 text-stone-700 px-3 py-1 rounded-full text-sm font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
                 </div>
               </div>
             </div>
 
             {/* Right Side - Next Images Preview */}
             <div className="hidden lg:block space-y-4">
-              <h3 className="text-lg font-semibold text-stone-600 mb-4 text-center">
-                Coming Next
-              </h3>
               <div className="space-y-3">
                 {[...Array(2)].map((_, idx) => {
                   const nextIndex = (current + idx + 1) % total;
@@ -211,16 +132,16 @@ const PastryGallery = ({ pastries }) => {
               className={`transition-all duration-300 focus:outline-none bg-transparent border-none p-1 ${
                 idx === current ? "scale-125" : "scale-100 hover:scale-110"
               }`}
-              aria-label={`View ${pastryDetails[idx]?.name}`}
+              aria-label={`View pastry ${idx + 1}`}
             >
               <div className="relative">
                 <img
                   src="/src/assets/tabbyCat.png"
-                  alt={pastryDetails[idx]?.name}
-                  className={`relative w-10 h-10 rounded-full object-cover transition-all duration-300 ${
+                  alt={`Pastry ${idx + 1}`}
+                  className={`relative w-8 h-8 rounded-full object-cover transition-all duration-300 ${
                     idx === current
-                      ? "border-3 border-stone-500 shadow-lg"
-                      : "border-2 border-gray-300 opacity-60 hover:opacity-80 hover:border-stone-400"
+                      ? "border-2 border-stone-500 shadow-md"
+                      : "border border-gray-300 opacity-60 hover:opacity-80 hover:border-stone-400"
                   }`}
                 />
               </div>
