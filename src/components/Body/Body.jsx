@@ -241,7 +241,7 @@ const Body = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 pt-32">
       {/* Hero Section with Images and Quote */}
       <div className="hero-section relative bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 mb-12 shadow-lg min-h-[500px] overflow-hidden">
         {/* Ava Image - Right Side */}
