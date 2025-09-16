@@ -174,7 +174,8 @@ const ContactSection = () => {
                   type="submit"
                   className="w-full text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center group text-lg"
                   style={{
-                    background: "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))"
+                    background:
+                      "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
                   }}
                 >
                   <svg
