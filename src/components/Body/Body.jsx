@@ -243,20 +243,20 @@ const Body = () => {
   return (
     <div className="container mx-auto px-4 py-8 pt-32">
       {/* Hero Section with Images and Quote */}
-      <div className="hero-section relative rounded-2xl p-8 mb-12 min-h-[500px] overflow-hidden">
+      <div className="hero-section relative rounded-2xl p-6 mb-12 min-h-[280px] overflow-hidden">
         {/* Ava Image - Right Side */}
         <div className="absolute top-4 right-4 z-10">
           <img
             src="/src/assets/ava.png"
             alt="Ava"
-            className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+            className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </div>
 
-        {/* Quote Section - Middle Left, positioned lower */}
-        <div className="flex items-end justify-start min-h-[400px] pl-4 md:pl-8 pb-16">
+        {/* Quote Section - More compact */}
+        <div className="flex items-center justify-start min-h-[240px] pl-6 md:pl-12 pr-52 md:pr-64">
           <div className="max-w-lg">
-            <blockquote className="text-lg md:text-xl font-serif italic text-stone-700 leading-relaxed mb-6">
+            <blockquote className="text-lg md:text-xl font-serif italic text-stone-700 leading-relaxed mb-4">
               "Baking is love made visible. Every pastry tells a story, every
               bread carries warmth, and every sweet treat brings joy to those we
               cherish."
@@ -268,7 +268,7 @@ const Body = () => {
           </div>
         </div>
 
-        {/* Call to Action Button - Bottom Right */}
+        {/* Call to Action Button - Bottom Right, more compact */}
         <div className="absolute bottom-4 right-4 z-10">
           <Link
             to="/menu"
