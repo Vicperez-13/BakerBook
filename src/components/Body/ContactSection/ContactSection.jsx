@@ -27,26 +27,6 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* Welcome Message Banner */}
-        <div className="w-full max-w-4xl mb-12">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-amber-300/40 to-yellow-300/40 rounded-2xl blur-lg"></div>
-            <div className="relative bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-200/60">
-              <div className="flex items-center justify-center">
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-amber-700 mb-2">
-                    🌟 We're Here to Help Make Your Day Sweeter 🌟
-                  </h3>
-                  <p className="text-gray-600">
-                    From special orders to recipe questions, our friendly team
-                    loves connecting with fellow pastry enthusiasts!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Contact Methods - Better organized */}
         <div className="w-full max-w-5xl mb-12">
           <div className="grid md:grid-cols-3 gap-6">
