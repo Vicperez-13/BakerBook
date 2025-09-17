@@ -30,14 +30,14 @@ function Header() {
       }`}
     >
       <div
-        className="navbar shadow-lg py-6 px-8 w-full backdrop-blur-md border-b border-emerald-800/20"
+        className="navbar shadow-lg py-4 px-8 w-full backdrop-blur-md border-b border-emerald-800/20"
         style={{
           background:
             "linear-gradient(to right, rgba(82, 101, 84, 0.9), rgba(107, 142, 123, 0.85), rgba(75, 95, 77, 0.9))",
         }}
       >
         {/* Mobile menu button + Logo */}
-        <div className="navbar-start">
+        <div className="navbar-start" style={{ marginLeft: "120px" }}>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
               <svg
@@ -98,19 +98,22 @@ function Header() {
           {/* Logo - always visible */}
           <Link
             to="/"
-            className="flex items-center text-2xl font-bold text-green-50 p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white"
+            className="flex items-center text-3xl md:text-4xl font-bold text-green-50 p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white whitespace-nowrap"
           >
             <img
               src="/src/assets/tabbyCat.png"
               alt="Ava's Goodies Logo"
-              className="w-12 h-12 object-cover rounded-full mr-3"
+              className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-full mr-4 md:mr-6"
             />
-            Ava's Goodies
+            Ava's Tweats
           </Link>
         </div>
 
         {/* Desktop menu - centered */}
-        <div className="navbar-center hidden md:flex">
+        <div
+          className="navbar-center hidden md:flex"
+          style={{ marginLeft: "80px" }}
+        >
           <ul className="menu menu-horizontal px-1 gap-4">
             <li>
               <Link

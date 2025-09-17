@@ -59,41 +59,41 @@ const Body = () => {
         <div className="relative z-20 group animate-fade-in">
           {/* Interactive Cat Container */}
           <div
-            className="relative bg-white/95 rounded-full p-4 shadow-lg border-2 border-amber-200 group-hover:border-amber-400 transition-all duration-500 group-hover:scale-105 cursor-pointer"
+            className="relative bg-stone-50/95 rounded-full p-3 shadow-md border border-stone-300 group-hover:border-stone-400 transition-all duration-500 group-hover:scale-105 cursor-pointer"
             onClick={onClick}
           >
             {/* Navigation Cat */}
             <img
               src="/src/assets/tabbyCat.png"
               alt="Navigate to next section"
-              className="w-12 h-12 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
+              className="w-8 h-8 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
             />
 
             {/* Movement Indicator Dots */}
-            <div className="absolute -top-2 -right-1 flex space-x-1">
+            <div className="absolute -top-1 -right-1 flex space-x-0.5">
               <div
-                className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                className="w-1 h-1 bg-stone-500 rounded-full animate-bounce"
                 style={{ animationDelay: "0s" }}
               ></div>
               <div
-                className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                className="w-1 h-1 bg-stone-500 rounded-full animate-bounce"
                 style={{ animationDelay: "0.2s" }}
               ></div>
               <div
-                className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-bounce"
+                className="w-1 h-1 bg-stone-500 rounded-full animate-bounce"
                 style={{ animationDelay: "0.4s" }}
               ></div>
             </div>
           </div>
 
           {/* Dynamic Section Label */}
-          <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-            <div className="bg-white/90 px-4 py-2 rounded-full shadow-md border border-amber-200 transition-all duration-300">
-              <p className="text-sm font-medium text-amber-700 flex items-center">
-                <span className="mr-2">{emoji}</span>
+          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+            <div className="bg-stone-50/95 px-3 py-1.5 rounded-full shadow-md border border-stone-300 transition-all duration-300">
+              <p className="text-xs font-medium text-stone-600 flex items-center">
+                <span className="mr-1.5">{emoji}</span>
                 {label}
                 <svg
-                  className="ml-2 w-4 h-4 animate-bounce"
+                  className="ml-1.5 w-3 h-3 animate-bounce"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ const Body = () => {
         "Focaccia",
       ],
       icon: "🍞",
-      color: "bg-amber-100 border-amber-200",
+      color: "bg-stone-100/80 border-stone-300",
     },
     {
       id: "cakes-cupcakes",
@@ -143,7 +143,7 @@ const Body = () => {
         "Lemon Cupcakes",
       ],
       icon: "🎂",
-      color: "bg-pink-100 border-pink-200",
+      color: "bg-stone-50/80 border-stone-200",
     },
     {
       id: "cookies-bars",
@@ -157,7 +157,7 @@ const Body = () => {
         "Oatmeal Cookies",
       ],
       icon: "🍪",
-      color: "bg-orange-100 border-orange-200",
+      color: "bg-stone-100/70 border-stone-400",
     },
     {
       id: "pastries",
@@ -171,7 +171,7 @@ const Body = () => {
         "Napoleon Cake",
       ],
       icon: "🥐",
-      color: "bg-yellow-100 border-yellow-200",
+      color: "bg-stone-100/60 border-stone-400",
     },
     {
       id: "pies",
@@ -185,7 +185,7 @@ const Body = () => {
         "Strawberry Cream Pie",
       ],
       icon: "🥧",
-      color: "bg-green-100 border-green-200",
+      color: "bg-stone-50/70 border-stone-300",
     },
     {
       id: "muffins",
@@ -199,7 +199,7 @@ const Body = () => {
         "Lemon Poppy Seed",
       ],
       icon: "🧁",
-      color: "bg-blue-100 border-blue-200",
+      color: "bg-slate-100/60 border-slate-400",
     },
     {
       id: "doughnuts",
@@ -213,7 +213,7 @@ const Body = () => {
         "Old-fashioned",
       ],
       icon: "🍩",
-      color: "bg-purple-100 border-purple-200",
+      color: "bg-stone-200/50 border-stone-400",
     },
     {
       id: "biscuits",
@@ -227,7 +227,7 @@ const Body = () => {
         "Herb Biscuits",
       ],
       icon: "🥯",
-      color: "bg-red-100 border-red-200",
+      color: "bg-stone-50/60 border-stone-400",
     },
   ];
 
@@ -243,40 +243,44 @@ const Body = () => {
   return (
     <div className="container mx-auto px-4 py-8 pt-32">
       {/* Hero Section with Images and Quote */}
-      <div className="hero-section relative bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 mb-12 shadow-lg min-h-[500px] overflow-hidden">
+      <div className="hero-section relative rounded-2xl p-8 mb-12 min-h-[400px] overflow-hidden">
         {/* Ava Image - Right Side */}
-        <div className="absolute top-4 right-4 z-10">
+        <div className="absolute top-8 right-8 z-10">
           <img
             src="/src/assets/ava.png"
             alt="Ava"
-            className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+            className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </div>
 
-        {/* Quote Section - Middle Left, positioned lower */}
-        <div className="flex items-end justify-start min-h-[400px] pl-4 md:pl-8 pb-16">
-          <div className="max-w-lg">
-            <blockquote className="text-lg md:text-xl font-serif italic text-gray-700 leading-relaxed mb-6">
+        {/* Quote Section - Centered and balanced */}
+        <div className="flex items-center justify-start min-h-[360px] pl-8 md:pl-16 pr-8 md:pr-16">
+          <div className="max-w-lg md:max-w-xl">
+            <blockquote className="text-xl md:text-2xl font-serif italic text-stone-700 leading-relaxed mb-6">
               "Baking is love made visible. Every pastry tells a story, every
               bread carries warmth, and every sweet treat brings joy to those we
               cherish."
             </blockquote>
-            <div className="text-right">
-              <p className="text-lg font-semibold text-amber-600">- Ava</p>
-              <p className="text-sm text-gray-500">Head Baker & Owner</p>
+            <div className="text-left">
+              <p className="text-xl font-semibold text-stone-600">- Ava</p>
+              <p className="text-base text-stone-600">Head Baker & Owner</p>
             </div>
           </div>
         </div>
 
-        {/* Call to Action Button - Bottom Right */}
-        <div className="absolute bottom-4 right-4 z-10">
+        {/* Call to Action Button - Bottom right of hero section */}
+        <div className="absolute bottom-8 right-8 z-10">
           <Link
             to="/menu"
-            className="inline-flex items-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center px-10 py-5 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
+            }}
           >
             <span>Explore Our Menu</span>
             <svg
-              className="ml-2 w-5 h-5"
+              className="ml-3 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -296,7 +300,6 @@ const Body = () => {
       <NavigatorComponent
         isVisible={visibleNavigators.afterHero}
         label="Discover Our Pastries"
-        emoji="🍯"
         onClick={() => {
           const gallery = document.querySelector("#pastry-gallery");
           gallery?.scrollIntoView({ behavior: "smooth" });
@@ -312,7 +315,6 @@ const Body = () => {
       <NavigatorComponent
         isVisible={visibleNavigators.afterGallery}
         label="Get In Touch"
-        emoji="💬"
         onClick={() => {
           const contact = document.querySelector("#contact-section");
           contact?.scrollIntoView({ behavior: "smooth" });
@@ -326,7 +328,6 @@ const Body = () => {
       <NavigatorComponent
         isVisible={true}
         label="Back to Top"
-        emoji="⬆️"
         arrowDirection="up"
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
