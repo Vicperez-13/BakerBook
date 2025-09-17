@@ -130,17 +130,17 @@ const ContactSection = () => {
                   }
                 >
                   <option value="">How can we make your day sweeter?</option>
-                  <option value="general">Just saying hello! 👋</option>
-                  <option value="order">Custom order inquiry 🎂</option>
-                  <option value="catering">Event catering 🎉</option>
+                  <option value="general">Just saying hello! </option>
+                  <option value="order">Custom order inquiry </option>
+                  <option value="catering">Event catering </option>
                   <option value="feedback">
-                    Share some love (or suggestions) 💕
+                    Share some love (or suggestions)
                   </option>
                 </select>
 
                 <textarea
                   rows={5}
-                  placeholder="Share your thoughts, dreams, or pastry wishes... We're excited to hear from you! ✨"
+                  placeholder="Share your thoughts, dreams, or pastry wishes... We're excited to hear from you! "
                   className="w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-all duration-200 resize-vertical"
                   style={{
                     backgroundColor: "var(--mocha-latte)",
@@ -186,7 +186,7 @@ const ContactSection = () => {
                       d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
                     />
                   </svg>
-                  Send Our Sweet Message 🍯
+                  Send Our Sweet Message
                 </button>
               </form>
             </div>
