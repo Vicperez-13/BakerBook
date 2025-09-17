@@ -7,15 +7,7 @@ const About = () => {
       style={{ backgroundColor: "var(--mocha-foam)" }}
     >
       {/* Hero Section */}
-      <section
-        className="relative py-24"
-        style={{
-          background: `linear-gradient(135deg, 
-            var(--mocha-latte) 0%, 
-            var(--mocha-cream) 50%, 
-            var(--mocha-foam) 100%)`,
-        }}
-      >
+      <section className="relative py-24 pt-40">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1
             className="text-5xl md:text-6xl font-bold mb-6"

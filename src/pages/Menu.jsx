@@ -110,34 +110,24 @@ const Menu = () => {
       className="min-h-screen"
       style={{ backgroundColor: "var(--mocha-foam)" }}
     >
-      {/* Header */}
-      <div
-        className="text-white py-16"
-        style={{
-          background:
-            "linear-gradient(to right, var(--mocha-medium), var(--mocha-dark))",
-        }}
-      >
-        <div className="container mx-auto px-4 text-center">
+      {/* Page Title */}
+      <div className="container mx-auto px-4 pt-40 pb-8">
+        <div className="text-center">
           <h1
-            className="text-5xl font-bold mb-4"
-            style={{ fontFamily: "Comic Neue, cursive" }}
+            className="text-5xl md:text-6xl font-bold mb-6"
+            style={{
+              fontFamily: "Comic Neue, cursive",
+              color: "var(--mocha-text)",
+            }}
           >
-            Our Complete Menu
+            Pastries
           </h1>
-          <p
-            className="text-xl max-w-2xl mx-auto"
-            style={{ color: "var(--mocha-latte)" }}
-          >
-            Explore our delicious selection of freshly baked goods, made daily
-            with love and the finest ingredients
-          </p>
         </div>
       </div>
 
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-start mb-8">
           <div className="relative">
             <select
               value={selectedCategory}

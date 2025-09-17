@@ -258,17 +258,7 @@ const Body = () => {
     <>
       <div className="container mx-auto px-4 py-8 pt-32">
         {/* Hero Section with Images and Quote */}
-        <div
-          className="hero-section relative rounded-2xl px-6 pt-32 pb-16 mb-12 min-h-[85vh] overflow-hidden"
-          style={{
-            background: `linear-gradient(135deg, 
-              var(--mocha-foam) 0%, 
-              var(--mocha-latte) 25%, 
-              var(--mocha-cream) 50%, 
-              var(--mocha-latte) 75%, 
-              var(--mocha-foam) 100%)`,
-          }}
-        >
+        <div className="hero-section relative rounded-2xl px-6 pt-32 pb-16 mb-12 min-h-[85vh] overflow-hidden">
           {/* Main Content - Side by Side Layout */}
           <div className="flex items-center justify-between min-h-[75vh] gap-2">
             {/* Quote Section - Left Side */}
