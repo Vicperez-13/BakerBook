@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Comic+Neue:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Comic+Neue:wght@400;700&family=Dancing+Script:wght@400;500;600;700&family=Satisfy&family=Great+Vibes&family=Allura&family=Alex+Brush&family=Pacifico&family=Kaushan+Script&display=swap");
+
+.groovy-logo {
+  font-family: "Pacifico", cursive !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+  transform: rotate(-2deg) !important;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
