@@ -7,9 +7,24 @@ const ContactSection = () => {
         {/* Message Form - Share Your Sweet Story */}
         <div className="w-full">
           <div className="relative group">
-            <div className="relative bg-stone-50/95 rounded-2xl p-8 border-2 border-stone-300 hover:border-stone-400 transition-all duration-300 shadow-lg">
+            <div
+              className="relative rounded-2xl p-8 border-2 transition-all duration-300 shadow-lg"
+              style={{
+                backgroundColor: "var(--mocha-foam)",
+                borderColor: "var(--mocha-cream)",
+              }}
+              onMouseEnter={(e) =>
+                (e.target.style.borderColor = "var(--mocha-light)")
+              }
+              onMouseLeave={(e) =>
+                (e.target.style.borderColor = "var(--mocha-cream)")
+              }
+            >
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-stone-600 mb-2 flex items-center justify-center">
+                <h3
+                  className="text-2xl font-bold mb-2 flex items-center justify-center"
+                  style={{ color: "var(--mocha-text)" }}
+                >
                   <svg
                     className="w-6 h-6 mr-3"
                     fill="none"
@@ -25,7 +40,7 @@ const ContactSection = () => {
                   </svg>
                   Share Your Sweet Story
                 </h3>
-                <p className="text-stone-600">
+                <p style={{ color: "var(--mocha-text-light)" }}>
                   Tell us what's on your mind - we love hearing from you!
                 </p>
               </div>
@@ -36,19 +51,84 @@ const ContactSection = () => {
                     <input
                       type="text"
                       placeholder="Your lovely name"
-                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300 text-stone-800 placeholder-stone-500"
+                      className="w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-all duration-200"
+                      style={{
+                        backgroundColor: "var(--mocha-latte)",
+                        borderColor: "var(--mocha-cream)",
+                        color: "var(--mocha-text)",
+                      }}
+                      onFocus={(e) => {
+                        e.target.style.borderColor = "var(--mocha-accent)";
+                        e.target.style.boxShadow = `0 0 0 2px ${getComputedStyle(
+                          document.documentElement
+                        ).getPropertyValue("--mocha-light")}33`;
+                      }}
+                      onBlur={(e) => {
+                        e.target.style.borderColor = "var(--mocha-cream)";
+                        e.target.style.boxShadow = "none";
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.borderColor = "var(--mocha-light)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.borderColor = "var(--mocha-cream)")
+                      }
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       placeholder="your.email@example.com"
-                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300 text-stone-800 placeholder-stone-500"
+                      className="w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-all duration-200"
+                      style={{
+                        backgroundColor: "var(--mocha-latte)",
+                        borderColor: "var(--mocha-cream)",
+                        color: "var(--mocha-text)",
+                      }}
+                      onFocus={(e) => {
+                        e.target.style.borderColor = "var(--mocha-accent)";
+                        e.target.style.boxShadow = `0 0 0 2px ${getComputedStyle(
+                          document.documentElement
+                        ).getPropertyValue("--mocha-light")}33`;
+                      }}
+                      onBlur={(e) => {
+                        e.target.style.borderColor = "var(--mocha-cream)";
+                        e.target.style.boxShadow = "none";
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.borderColor = "var(--mocha-light)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.borderColor = "var(--mocha-cream)")
+                      }
                     />
                   </div>
                 </div>
 
-                <select className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300 text-stone-800">
+                <select
+                  className="w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-all duration-200"
+                  style={{
+                    backgroundColor: "var(--mocha-latte)",
+                    borderColor: "var(--mocha-cream)",
+                    color: "var(--mocha-text)",
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = "var(--mocha-accent)";
+                    e.target.style.boxShadow = `0 0 0 2px ${getComputedStyle(
+                      document.documentElement
+                    ).getPropertyValue("--mocha-light")}33`;
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = "var(--mocha-cream)";
+                    e.target.style.boxShadow = "none";
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.borderColor = "var(--mocha-light)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.borderColor = "var(--mocha-cream)")
+                  }
+                >
                   <option value="">How can we make your day sweeter?</option>
                   <option value="general">Just saying hello! 👋</option>
                   <option value="order">Custom order inquiry 🎂</option>
@@ -61,7 +141,28 @@ const ContactSection = () => {
                 <textarea
                   rows={5}
                   placeholder="Share your thoughts, dreams, or pastry wishes... We're excited to hear from you! ✨"
-                  className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 resize-vertical hover:border-stone-300 text-stone-800 placeholder-stone-500"
+                  className="w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-all duration-200 resize-vertical"
+                  style={{
+                    backgroundColor: "var(--mocha-latte)",
+                    borderColor: "var(--mocha-cream)",
+                    color: "var(--mocha-text)",
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = "var(--mocha-accent)";
+                    e.target.style.boxShadow = `0 0 0 2px ${getComputedStyle(
+                      document.documentElement
+                    ).getPropertyValue("--mocha-light")}33`;
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = "var(--mocha-cream)";
+                    e.target.style.boxShadow = "none";
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.borderColor = "var(--mocha-light)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.borderColor = "var(--mocha-cream)")
+                  }
                 ></textarea>
 
                 <button
@@ -69,7 +170,7 @@ const ContactSection = () => {
                   className="w-full text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center group text-lg"
                   style={{
                     background:
-                      "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
+                      "linear-gradient(to right, var(--mocha-medium), var(--mocha-dark))",
                   }}
                 >
                   <svg

@@ -258,17 +258,28 @@ const Body = () => {
     <>
       <div className="container mx-auto px-4 py-8 pt-32">
         {/* Hero Section with Images and Quote */}
-        <div className="hero-section relative rounded-2xl px-6 pt-32 pb-16 mb-12 min-h-[85vh] overflow-hidden">
+        <div
+          className="hero-section relative rounded-2xl px-6 pt-32 pb-16 mb-12 min-h-[85vh] overflow-hidden"
+          style={{
+            background: `linear-gradient(135deg, 
+              var(--mocha-foam) 0%, 
+              var(--mocha-latte) 25%, 
+              var(--mocha-cream) 50%, 
+              var(--mocha-latte) 75%, 
+              var(--mocha-foam) 100%)`,
+          }}
+        >
           {/* Main Content - Side by Side Layout */}
           <div className="flex items-center justify-between min-h-[75vh] gap-2">
             {/* Quote Section - Left Side */}
             <div className="flex-1 max-w-2xl">
               <blockquote
-                className={`text-lg sm:text-xl md:text-3xl lg:text-4xl font-serif italic text-stone-700 leading-relaxed mb-6 transition-all duration-700 ${
+                className={`text-lg sm:text-xl md:text-3xl lg:text-4xl font-serif italic leading-relaxed mb-6 transition-all duration-700 ${
                   quoteVisible
                     ? "animate-slide-in-left"
                     : "animation-hidden-left"
                 }`}
+                style={{ color: "var(--mocha-text)" }}
               >
                 "Baking is love made visible. Every pastry tells a story, every
                 bread carries warmth, and every sweet treat brings joy to those
@@ -279,10 +290,16 @@ const Body = () => {
                   authorVisible ? "animate-fade-in" : "animation-hidden"
                 }`}
               >
-                <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-stone-600">
+                <p
+                  className="text-xl sm:text-2xl md:text-3xl font-semibold"
+                  style={{ color: "var(--mocha-text-light)" }}
+                >
                   - Ava
                 </p>
-                <p className="text-sm sm:text-base md:text-lg text-stone-600">
+                <p
+                  className="text-sm sm:text-base md:text-lg"
+                  style={{ color: "var(--mocha-text-light)" }}
+                >
                   Head Baker & Owner
                 </p>
               </div>
@@ -298,7 +315,7 @@ const Body = () => {
                   className="inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base md:text-lg"
                   style={{
                     background:
-                      "linear-gradient(to right, rgba(120, 93, 75, 0.85), rgba(101, 78, 65, 0.9))",
+                      "linear-gradient(to right, var(--mocha-medium), var(--mocha-dark))",
                   }}
                 >
                   <span>Explore Our Menu</span>
@@ -322,7 +339,7 @@ const Body = () => {
                   className="inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base md:text-lg"
                   style={{
                     background:
-                      "linear-gradient(to right, rgba(82, 101, 84, 0.85), rgba(75, 95, 77, 0.9))",
+                      "linear-gradient(to right, var(--mocha-light), var(--mocha-accent))",
                   }}
                 >
                   <span>About Ava</span>
@@ -362,14 +379,20 @@ const Body = () => {
                 {/* Simple playful quote with nice font */}
                 <div className="space-y-1">
                   <p
-                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-600 leading-tight"
-                    style={{ fontFamily: "Comic Neue, cursive" }}
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight"
+                    style={{
+                      fontFamily: "Comic Neue, cursive",
+                      color: "var(--mocha-accent)",
+                    }}
                   >
                     Don't stop now—
                   </p>
                   <p
-                    className="text-xl sm:text-2xl lg:text-3xl font-semibold text-amber-500 italic"
-                    style={{ fontFamily: "Comic Neue, cursive" }}
+                    className="text-xl sm:text-2xl lg:text-3xl font-semibold italic"
+                    style={{
+                      fontFamily: "Comic Neue, cursive",
+                      color: "var(--mocha-light)",
+                    }}
                   >
                     this dough's got layers
                   </p>
@@ -378,7 +401,8 @@ const Body = () => {
                 <div className="mt-8 flex justify-center">
                   <div className="animate-bounce-down">
                     <svg
-                      className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600"
+                      className="w-10 h-10 sm:w-12 sm:h-12"
+                      style={{ color: "var(--mocha-accent)" }}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

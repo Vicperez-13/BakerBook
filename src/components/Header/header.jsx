@@ -30,10 +30,10 @@ function Header() {
       }`}
     >
       <div
-        className="navbar shadow-lg py-4 px-8 w-full backdrop-blur-md border-b border-emerald-800/20"
+        className="navbar shadow-lg py-4 px-8 w-full backdrop-blur-md border-b border-amber-900/20"
         style={{
           background:
-            "linear-gradient(to right, rgba(82, 101, 84, 0.9), rgba(75, 95, 77, 0.9))",
+            "linear-gradient(to right, rgba(60, 36, 20, 0.9), rgba(93, 58, 34, 0.85), rgba(139, 90, 60, 0.9))",
         }}
       >
         {/* Mobile menu button + Logo */}
@@ -62,7 +62,7 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105 groovy-logo"
+                  className="text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/40 hover:scale-105 groovy-logo"
                 >
                   Home
                 </Link>
@@ -70,7 +70,7 @@ function Header() {
               <li>
                 <Link
                   to="/menu"
-                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105 groovy-logo"
+                  className="text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/40 hover:scale-105 groovy-logo"
                 >
                   Menu
                 </Link>
@@ -78,7 +78,7 @@ function Header() {
               <li>
                 <Link
                   to="/about"
-                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105 groovy-logo"
+                  className="text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/40 hover:scale-105 groovy-logo"
                 >
                   About
                 </Link>
@@ -90,7 +90,7 @@ function Header() {
                       document.querySelector("#contact-section");
                     contactSection?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105 cursor-pointer w-full text-left bg-transparent border-none focus:outline-none focus:bg-emerald-600/40 active:bg-emerald-600/60 groovy-logo"
+                  className="text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/40 hover:scale-105 cursor-pointer w-full text-left bg-transparent border-none focus:outline-none focus:bg-amber-800/40 active:bg-amber-800/60 groovy-logo"
                 >
                   Contact
                 </button>
@@ -101,7 +101,7 @@ function Header() {
           {/* Logo - always visible */}
           <Link
             to="/"
-            className="flex items-center text-3xl md:text-4xl font-bold text-green-50 p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white whitespace-nowrap"
+            className="flex items-center text-3xl md:text-4xl font-bold text-amber-50 p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white whitespace-nowrap"
           >
             <img
               src="/src/assets/muffin .png"
@@ -121,28 +121,28 @@ function Header() {
             <li>
               <Link
                 to="/"
-                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
+                className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
               >
                 <span className="relative z-10">Home</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </li>
             <li>
               <Link
                 to="/menu"
-                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:rotate-1 group groovy-logo"
+                className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:rotate-1 group groovy-logo"
               >
                 <span className="relative z-10">Menu</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </li>
             <li>
               <Link
                 to="/about"
-                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
+                className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
               >
                 <span className="relative z-10">About</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </li>
             <li>
@@ -152,10 +152,10 @@ function Header() {
                     document.querySelector("#contact-section");
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer bg-transparent border-none focus:outline-none focus:bg-emerald-600/30 active:bg-emerald-600/50 groovy-logo"
+                className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer bg-transparent border-none focus:outline-none focus:bg-amber-800/30 active:bg-amber-800/50 groovy-logo"
               >
                 <span className="relative z-10">Contact</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </li>
           </ul>

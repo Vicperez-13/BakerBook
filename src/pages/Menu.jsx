@@ -106,9 +106,18 @@ const Menu = () => {
       : menuItems.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div
+      className="min-h-screen"
+      style={{ backgroundColor: "var(--mocha-foam)" }}
+    >
       {/* Header */}
-      <div className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white py-16">
+      <div
+        className="text-white py-16"
+        style={{
+          background:
+            "linear-gradient(to right, var(--mocha-medium), var(--mocha-dark))",
+        }}
+      >
         <div className="container mx-auto px-4 text-center">
           <h1
             className="text-5xl font-bold mb-4"
@@ -116,7 +125,10 @@ const Menu = () => {
           >
             Our Complete Menu
           </h1>
-          <p className="text-xl text-amber-100 max-w-2xl mx-auto">
+          <p
+            className="text-xl max-w-2xl mx-auto"
+            style={{ color: "var(--mocha-latte)" }}
+          >
             Explore our delicious selection of freshly baked goods, made daily
             with love and the finest ingredients
           </p>
@@ -130,8 +142,24 @@ const Menu = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="appearance-none bg-amber-50 border-2 border-amber-300 rounded-full px-8 py-4 pr-16 text-xl font-semibold text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300"
-              style={{ fontFamily: "Comic Neue, cursive" }}
+              className="appearance-none border-2 rounded-full px-8 py-4 pr-16 text-xl font-semibold focus:outline-none cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300"
+              style={{
+                fontFamily: "Comic Neue, cursive",
+                backgroundColor: "var(--mocha-latte)",
+                borderColor: "var(--mocha-cream)",
+                color: "var(--mocha-text)",
+              }}
+              onFocus={(e) => {
+                e.target.style.borderColor = "var(--mocha-accent)";
+                e.target.style.boxShadow = `0 0 0 2px ${getComputedStyle(
+                  document.documentElement
+                ).getPropertyValue("--mocha-light")}33`;
+              }}
+              onBlur={(e) => {
+                e.target.style.borderColor = "var(--mocha-cream)";
+                e.target.style.boxShadow =
+                  "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)";
+              }}
             >
               {categories.map((category) => (
                 <option key={category} value={category}>
@@ -142,7 +170,8 @@ const Menu = () => {
             {/* Custom dropdown arrow */}
             <div className="absolute inset-y-0 right-0 flex items-center pr-6 pointer-events-none">
               <svg
-                className="w-6 h-6 text-amber-600"
+                className="w-6 h-6"
+                style={{ color: "var(--mocha-accent)" }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -177,11 +206,17 @@ const Menu = () => {
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
                 {/* Category Badge */}
-                <div className="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div
+                  className="absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-semibold"
+                  style={{ backgroundColor: "var(--mocha-accent)" }}
+                >
                   {item.category}
                 </div>
                 {/* Price Badge */}
-                <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                <div
+                  className="absolute top-4 left-4 text-white px-3 py-1 rounded-full text-sm font-bold"
+                  style={{ backgroundColor: "var(--mocha-medium)" }}
+                >
                   {item.price}
                 </div>
               </div>
@@ -189,12 +224,18 @@ const Menu = () => {
               {/* Item Details */}
               <div className="p-6">
                 <h3
-                  className="text-xl font-bold text-stone-800 mb-3"
-                  style={{ fontFamily: "Comic Neue, cursive" }}
+                  className="text-xl font-bold mb-3"
+                  style={{
+                    fontFamily: "Comic Neue, cursive",
+                    color: "var(--mocha-text)",
+                  }}
                 >
                   {item.name}
                 </h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "var(--mocha-text-light)" }}
+                >
                   {item.description}
                 </p>
               </div>
@@ -206,8 +247,11 @@ const Menu = () => {
         {filteredItems.length === 0 && (
           <div className="text-center py-12">
             <p
-              className="text-2xl text-stone-600"
-              style={{ fontFamily: "Comic Neue, cursive" }}
+              className="text-2xl"
+              style={{
+                fontFamily: "Comic Neue, cursive",
+                color: "var(--mocha-text-light)",
+              }}
             >
               No items found in this category. Check back soon!
             </p>
@@ -219,8 +263,17 @@ const Menu = () => {
       <div className="text-center pb-12">
         <button
           onClick={() => navigate("/")}
-          className="inline-flex items-center px-8 py-4 bg-stone-600 hover:bg-stone-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          style={{ fontFamily: "Comic Neue, cursive" }}
+          className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+          style={{
+            fontFamily: "Comic Neue, cursive",
+            backgroundColor: "var(--mocha-medium)",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.backgroundColor = "var(--mocha-dark)")
+          }
+          onMouseLeave={(e) =>
+            (e.target.style.backgroundColor = "var(--mocha-medium)")
+          }
         >
           <svg
             className="mr-3 w-5 h-5"

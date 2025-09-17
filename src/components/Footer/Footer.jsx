@@ -10,7 +10,7 @@ const Footer = () => {
       className="relative py-12"
       style={{
         background:
-          "linear-gradient(to right, rgba(82, 101, 84, 0.25), rgba(107, 142, 123, 0.20), rgba(75, 95, 77, 0.25))",
+          "linear-gradient(to right, var(--mocha-cream), var(--mocha-latte), var(--mocha-cream))",
       }}
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -22,23 +22,45 @@ const Footer = () => {
         >
           {/* Email Contact */}
           <div>
-            <h4 className="text-lg font-bold text-stone-700 mb-4">Email Us</h4>
-            <p className="text-stone-600 mb-2">ava3065@icloud.com</p>
-            <p className="text-stone-600 text-sm italic">
+            <h4
+              className="text-lg font-bold mb-4"
+              style={{ color: "var(--mocha-text)" }}
+            >
+              Email Us
+            </h4>
+            <p style={{ color: "var(--mocha-text-light)" }} className="mb-2">
+              ava3065@icloud.com
+            </p>
+            <p
+              style={{ color: "var(--mocha-text-light)" }}
+              className="text-sm italic"
+            >
               We love hearing from you!
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold text-stone-700 mb-4">
+            <h4
+              className="text-lg font-bold mb-4"
+              style={{ color: "var(--mocha-text)" }}
+            >
               Quick Links
             </h4>
             <ul className="space-y-2">
               <li>
                 <a
                   href="/menu"
-                  className="text-stone-600 hover:text-stone-800 transition-colors duration-200"
+                  className="transition-colors duration-200"
+                  style={{
+                    color: "var(--mocha-text-light)",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.color = "var(--mocha-text)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.color = "var(--mocha-text-light)")
+                  }
                 >
                   Our Menu
                 </a>
@@ -46,7 +68,16 @@ const Footer = () => {
               <li>
                 <a
                   href="/about"
-                  className="text-stone-600 hover:text-stone-800 transition-colors duration-200"
+                  className="transition-colors duration-200"
+                  style={{
+                    color: "var(--mocha-text-light)",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.target.style.color = "var(--mocha-text)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.color = "var(--mocha-text-light)")
+                  }
                 >
                   About Ava
                 </a>
@@ -56,10 +87,16 @@ const Footer = () => {
 
           {/* Hours */}
           <div>
-            <h4 className="text-lg font-bold text-stone-700 mb-4">
+            <h4
+              className="text-lg font-bold mb-4"
+              style={{ color: "var(--mocha-text)" }}
+            >
               Bakery Hours
             </h4>
-            <div className="space-y-2 text-stone-600">
+            <div
+              className="space-y-2"
+              style={{ color: "var(--mocha-text-light)" }}
+            >
               <div className="flex justify-between">
                 <span>Monday - Friday</span>
                 <span>6AM - 6PM</span>
@@ -73,26 +110,45 @@ const Footer = () => {
                 <span>8AM - 4PM</span>
               </div>
             </div>
-            <p className="text-stone-600 mt-3 italic text-sm">
+            <p
+              style={{ color: "var(--mocha-text-light)" }}
+              className="mt-3 italic text-sm"
+            >
               Fresh pastries available all day!
             </p>
           </div>
 
           {/* Follow Us */}
           <div>
-            <h4 className="text-lg font-bold text-stone-700 mb-4">
+            <h4
+              className="text-lg font-bold mb-4"
+              style={{ color: "var(--mocha-text)" }}
+            >
               Follow Our Journey
             </h4>
-            <p className="text-stone-600 text-sm mb-4">
+            <p
+              style={{ color: "var(--mocha-text-light)" }}
+              className="text-sm mb-4"
+            >
               Stay updated with our latest creations!
             </p>
             <div className="flex justify-center space-x-3">
               <a
                 href="#"
-                className="bg-stone-200 hover:bg-stone-300 p-2 rounded-full transition-colors"
+                className="p-2 rounded-full transition-colors"
+                style={{
+                  backgroundColor: "var(--mocha-cream)",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "var(--mocha-light)")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "var(--mocha-cream)")
+                }
               >
                 <svg
-                  className="w-5 h-5 text-stone-700"
+                  className="w-5 h-5"
+                  style={{ color: "var(--mocha-text)" }}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -101,10 +157,20 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="bg-stone-200 hover:bg-stone-300 p-2 rounded-full transition-colors"
+                className="p-2 rounded-full transition-colors"
+                style={{
+                  backgroundColor: "var(--mocha-cream)",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "var(--mocha-light)")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "var(--mocha-cream)")
+                }
               >
                 <svg
-                  className="w-5 h-5 text-stone-700"
+                  className="w-5 h-5"
+                  style={{ color: "var(--mocha-text)" }}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -113,10 +179,20 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="bg-stone-200 hover:bg-stone-300 p-2 rounded-full transition-colors"
+                className="p-2 rounded-full transition-colors"
+                style={{
+                  backgroundColor: "var(--mocha-cream)",
+                }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "var(--mocha-light)")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "var(--mocha-cream)")
+                }
               >
                 <svg
-                  className="w-5 h-5 text-stone-700"
+                  className="w-5 h-5"
+                  style={{ color: "var(--mocha-text)" }}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -131,13 +207,22 @@ const Footer = () => {
         <div className="pt-3">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-3 md:mb-0">
-              <p className="text-stone-600 text-sm">
+              <p
+                style={{ color: "var(--mocha-text-light)" }}
+                className="text-sm"
+              >
                 © 2024 Ava's Tweats. Made with love and lots of BUDDDA.
               </p>
-              <p className="text-stone-600 text-xs mt-1">
+              <p
+                style={{ color: "var(--mocha-text-light)" }}
+                className="text-xs mt-1"
+              >
                 All rights reserved • Victor Morales Perez
               </p>
-              <p className="text-stone-600 text-xs mt-1 italic">
+              <p
+                style={{ color: "var(--mocha-text-light)" }}
+                className="text-xs mt-1 italic"
+              >
                 "Every message brings us joy - just like every pastry we bake
                 brings sweetness to your day." - The Ava's Goodies Team
               </p>
@@ -145,14 +230,28 @@ const Footer = () => {
             <div className="flex space-x-4 text-xs">
               <a
                 href="#"
-                className="text-stone-600 hover:text-stone-800 transition-colors duration-200"
+                className="transition-colors duration-200"
+                style={{ color: "var(--mocha-text-light)" }}
+                onMouseEnter={(e) =>
+                  (e.target.style.color = "var(--mocha-text)")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.color = "var(--mocha-text-light)")
+                }
               >
                 Privacy Policy
               </a>
-              <span className="text-stone-400">•</span>
+              <span style={{ color: "var(--mocha-light)" }}>•</span>
               <a
                 href="#"
-                className="text-stone-600 hover:text-stone-800 transition-colors duration-200"
+                className="transition-colors duration-200"
+                style={{ color: "var(--mocha-text-light)" }}
+                onMouseEnter={(e) =>
+                  (e.target.style.color = "var(--mocha-text)")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.color = "var(--mocha-text-light)")
+                }
               >
                 Terms of Service
               </a>
