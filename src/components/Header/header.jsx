@@ -33,7 +33,7 @@ function Header() {
         className="navbar shadow-lg py-4 px-8 w-full backdrop-blur-md border-b border-emerald-800/20"
         style={{
           background:
-            "linear-gradient(to right, rgba(82, 101, 84, 0.9), rgba(107, 142, 123, 0.85), rgba(75, 95, 77, 0.9))",
+            "linear-gradient(to right, rgba(82, 101, 84, 0.9), rgba(75, 95, 77, 0.9))",
         }}
       >
         {/* Mobile menu button + Logo */}
