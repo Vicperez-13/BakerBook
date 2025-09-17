@@ -244,56 +244,84 @@ const Body = () => {
     <>
       <div className="container mx-auto px-4 py-8 pt-32">
         {/* Hero Section with Images and Quote */}
-        <div className="hero-section relative rounded-2xl p-8 mb-12 min-h-[400px] overflow-hidden">
+        <div className="hero-section relative rounded-2xl p-8 mb-12 min-h-[520px] overflow-hidden">
           {/* Ava Image - Right Side */}
-          <div className="absolute top-8 right-8 z-10">
+          <div className="absolute top-12 right-12 z-10">
             <img
               src="/src/assets/ava.png"
               alt="Ava"
-              className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+              className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300"
+              style={{
+                borderRadius: "2rem",
+                border: "4px solid rgba(245, 245, 244, 0.8)",
+              }}
             />
           </div>
 
           {/* Quote Section - Centered and balanced */}
-          <div className="flex items-center justify-start min-h-[360px] pl-8 md:pl-16 pr-8 md:pr-16">
+          <div className="flex items-center justify-start min-h-[460px] pl-8 md:pl-16 pr-8 md:pr-16">
             <div className="max-w-lg md:max-w-xl">
               <blockquote className="text-xl md:text-2xl font-serif italic text-stone-700 leading-relaxed mb-6">
                 "Baking is love made visible. Every pastry tells a story, every
                 bread carries warmth, and every sweet treat brings joy to those
                 we cherish."
               </blockquote>
-              <div className="text-left">
+              <div className="text-left mb-8">
                 <p className="text-xl font-semibold text-stone-600">- Ava</p>
                 <p className="text-base text-stone-600">Head Baker & Owner</p>
               </div>
-            </div>
-          </div>
 
-          {/* Call to Action Button - Bottom right of hero section */}
-          <div className="absolute bottom-8 right-8 z-10">
-            <Link
-              to="/menu"
-              className="inline-flex items-center px-10 py-5 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
-              }}
-            >
-              <span>Explore Our Menu</span>
-              <svg
-                className="ml-3 w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
+              {/* Action Buttons - Under the quote */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/menu"
+                  className="inline-flex items-center justify-center px-8 py-4 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-base"
+                  style={{
+                    background:
+                      "linear-gradient(to right, rgba(120, 93, 75, 0.85), rgba(101, 78, 65, 0.9))",
+                  }}
+                >
+                  <span>Explore Our Menu</span>
+                  <svg
+                    className="ml-3 w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+
+                <Link
+                  to="/about"
+                  className="inline-flex items-center justify-center px-8 py-4 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-base"
+                  style={{
+                    background:
+                      "linear-gradient(to right, rgba(82, 101, 84, 0.85), rgba(75, 95, 77, 0.9))",
+                  }}
+                >
+                  <span>About Ava</span>
+                  <svg
+                    className="ml-3 w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 

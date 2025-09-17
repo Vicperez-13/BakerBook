@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer
-      className="relative py-16"
+      className="relative py-12"
       style={{
         background:
           "linear-gradient(to right, rgba(82, 101, 84, 0.25), rgba(107, 142, 123, 0.20), rgba(75, 95, 77, 0.25))",
@@ -11,12 +11,16 @@ const Footer = () => {
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Main Footer Content - Even 4-column layout */}
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-6">
           {/* Email Contact */}
           <div>
             <h4 className="text-lg font-bold text-stone-700 mb-4">Email Us</h4>
-            <p className="text-stone-600">ava3065@icloud.com</p>
+            <p className="text-stone-600 mb-2">ava3065@icloud.com</p>
+            <p className="text-stone-600 text-sm italic">
+              We love hearing from you!
+            </p>
           </div>
+
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold text-stone-700 mb-4">
@@ -72,9 +76,9 @@ const Footer = () => {
               Follow Our Journey
             </h4>
             <p className="text-stone-600 text-sm mb-4">
-              Stay updated with our latest creations and sweet surprises!
+              Stay updated with our latest creations!
             </p>
-            <div className="flex space-x-3">
+            <div className="flex justify-center space-x-3">
               <a
                 href="#"
                 className="bg-stone-200 hover:bg-stone-300 p-2 rounded-full transition-colors"
@@ -116,21 +120,21 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-stone-300 pt-8">
+        <div className="pt-3">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-center md:text-left mb-4 md:mb-0">
-              <p className="text-stone-600">
+            <div className="text-center md:text-left mb-3 md:mb-0">
+              <p className="text-stone-600 text-sm">
                 © 2024 Ava's Goodies. Made with love and lots of flour.
               </p>
-              <p className="text-stone-600 mt-1">
+              <p className="text-stone-600 text-xs mt-1">
                 All rights reserved • Victor Morales Perez
               </p>
-              <p className="text-stone-600 text-sm mt-2 italic">
+              <p className="text-stone-600 text-xs mt-1 italic">
                 "Every message brings us joy - just like every pastry we bake
                 brings sweetness to your day." - The Ava's Goodies Team
               </p>
             </div>
-            <div className="flex space-x-4 text-sm">
+            <div className="flex space-x-4 text-xs">
               <a
                 href="#"
                 className="text-stone-600 hover:text-stone-800 transition-colors duration-200"
