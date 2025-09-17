@@ -1,9 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Header() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleContactClick = () => {
+    // If we're not on the home page, navigate to home first
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete, then scroll to contact
+      setTimeout(() => {
+        const contactSection = document.querySelector("#contact-section");
+        contactSection?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      // If we're already on home page, just scroll to contact
+      const contactSection = document.querySelector("#contact-section");
+      contactSection?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,11 +106,7 @@ function Header() {
                 </li>
                 <li>
                   <button
-                    onClick={() => {
-                      const contactSection =
-                        document.querySelector("#contact-section");
-                      contactSection?.scrollIntoView({ behavior: "smooth" });
-                    }}
+                    onClick={handleContactClick}
                     className="text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/40 hover:scale-105 cursor-pointer w-full text-left bg-transparent border-none focus:outline-none focus:bg-amber-800/40 active:bg-amber-800/60 groovy-logo"
                   >
                     Contact
@@ -204,11 +218,7 @@ function Header() {
               </li>
               <li>
                 <button
-                  onClick={() => {
-                    const contactSection =
-                      document.querySelector("#contact-section");
-                    contactSection?.scrollIntoView({ behavior: "smooth" });
-                  }}
+                  onClick={handleContactClick}
                   className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer bg-transparent border-none focus:outline-none focus:bg-amber-800/30 active:bg-amber-800/50 groovy-logo"
                 >
                   <span className="relative z-10">Contact</span>
