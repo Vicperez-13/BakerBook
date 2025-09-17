@@ -258,13 +258,13 @@ const Body = () => {
     <>
       <div className="container mx-auto px-4 py-8 pt-32">
         {/* Hero Section with Images and Quote */}
-        <div className="hero-section relative rounded-2xl px-6 pt-32 pb-16 mb-12 min-h-[85vh] overflow-hidden">
-          {/* Main Content - Side by Side Layout */}
-          <div className="flex items-center justify-between min-h-[75vh] gap-2">
-            {/* Quote Section - Left Side */}
-            <div className="flex-1 max-w-2xl">
+        <div className="hero-section relative rounded-2xl px-4 md:px-6 pt-32 pb-16 mb-12 min-h-[85vh] overflow-hidden">
+          {/* Main Content - Mobile Stack, Desktop Side by Side */}
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between min-h-[75vh] gap-8 lg:gap-2">
+            {/* Quote Section - Top on mobile, Left on desktop */}
+            <div className="flex-1 max-w-2xl lg:order-1">
               <blockquote
-                className={`text-lg sm:text-xl md:text-3xl lg:text-4xl font-serif italic leading-relaxed mb-6 transition-all duration-700 ${
+                className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-serif italic leading-relaxed mb-4 md:mb-6 transition-all duration-700 ${
                   quoteVisible
                     ? "animate-slide-in-left"
                     : "animation-hidden-left"
@@ -276,18 +276,18 @@ const Body = () => {
                 we cherish."
               </blockquote>
               <div
-                className={`text-left mb-8 transition-all duration-700 ${
+                className={`text-left mb-6 md:mb-8 transition-all duration-700 ${
                   authorVisible ? "animate-fade-in" : "animation-hidden"
                 }`}
               >
                 <p
-                  className="text-xl sm:text-2xl md:text-3xl font-semibold"
+                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold"
                   style={{ color: "var(--mocha-text-light)" }}
                 >
                   - Ava
                 </p>
                 <p
-                  className="text-sm sm:text-base md:text-lg"
+                  className="text-sm md:text-base lg:text-lg"
                   style={{ color: "var(--mocha-text-light)" }}
                 >
                   Head Baker & Owner
@@ -296,13 +296,13 @@ const Body = () => {
 
               {/* Action Buttons - Under the quote */}
               <div
-                className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 ${
+                className={`flex flex-col sm:flex-row gap-3 md:gap-4 transition-all duration-700 ${
                   buttonsVisible ? "animate-slide-up" : "animation-hidden"
                 }`}
               >
                 <Link
                   to="/menu"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base md:text-lg"
+                  className="inline-flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm md:text-base lg:text-lg"
                   style={{
                     background:
                       "linear-gradient(to right, var(--mocha-medium), var(--mocha-dark))",
@@ -310,7 +310,7 @@ const Body = () => {
                 >
                   <span>Explore Our Menu</span>
                   <svg
-                    className="ml-2 sm:ml-3 md:ml-4 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                    className="ml-2 md:ml-3 lg:ml-4 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -326,7 +326,7 @@ const Body = () => {
 
                 <Link
                   to="/about"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base md:text-lg"
+                  className="inline-flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm md:text-base lg:text-lg"
                   style={{
                     background:
                       "linear-gradient(to right, var(--mocha-light), var(--mocha-accent))",
@@ -334,7 +334,7 @@ const Body = () => {
                 >
                   <span>About Ava</span>
                   <svg
-                    className="ml-2 sm:ml-3 md:ml-4 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                    className="ml-2 md:ml-3 lg:ml-4 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -350,9 +350,9 @@ const Body = () => {
               </div>
             </div>
 
-            {/* Ava Image - Right Side */}
+            {/* Ava Image - Bottom on mobile, Right on desktop */}
             <div
-              className={`flex-shrink-0 transition-all duration-700 ${
+              className={`flex-shrink-0 transition-all duration-700 lg:order-2 ${
                 imageVisible ? "animate-scale-in" : "animation-hidden-scale"
               }`}
             >
@@ -360,7 +360,7 @@ const Body = () => {
                 <img
                   src="/src/assets/ava.png"
                   alt="Ava"
-                  className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 mb-6"
+                  className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 mb-4 md:mb-6 mx-auto"
                   style={{
                     borderRadius: "2rem",
                     border: "4px solid rgba(245, 245, 244, 0.8)",
@@ -369,7 +369,7 @@ const Body = () => {
                 {/* Simple playful quote with nice font */}
                 <div className="space-y-1">
                   <p
-                    className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight"
+                    className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight"
                     style={{
                       fontFamily: "Comic Neue, cursive",
                       color: "var(--mocha-accent)",
@@ -378,7 +378,7 @@ const Body = () => {
                     Don't stop now—
                   </p>
                   <p
-                    className="text-xl sm:text-2xl lg:text-3xl font-semibold italic"
+                    className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold italic"
                     style={{
                       fontFamily: "Comic Neue, cursive",
                       color: "var(--mocha-light)",
@@ -388,10 +388,10 @@ const Body = () => {
                   </p>
                 </div>
                 {/* Simple bouncing down arrow */}
-                <div className="mt-8 flex justify-center">
+                <div className="mt-6 md:mt-8 flex justify-center">
                   <div className="animate-bounce-down">
                     <svg
-                      className="w-10 h-10 sm:w-12 sm:h-12"
+                      className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
                       style={{ color: "var(--mocha-accent)" }}
                       fill="none"
                       stroke="currentColor"
