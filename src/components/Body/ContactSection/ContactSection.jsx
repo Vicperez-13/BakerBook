@@ -36,19 +36,19 @@ const ContactSection = () => {
                     <input
                       type="text"
                       placeholder="Your lovely name"
-                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300"
+                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300 text-stone-800 placeholder-stone-500"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       placeholder="your.email@example.com"
-                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300"
+                      className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300 text-stone-800 placeholder-stone-500"
                     />
                   </div>
                 </div>
 
-                <select className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300">
+                <select className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 hover:border-stone-300 text-stone-800">
                   <option value="">How can we make your day sweeter?</option>
                   <option value="general">Just saying hello! 👋</option>
                   <option value="order">Custom order inquiry 🎂</option>
@@ -61,7 +61,7 @@ const ContactSection = () => {
                 <textarea
                   rows={5}
                   placeholder="Share your thoughts, dreams, or pastry wishes... We're excited to hear from you! ✨"
-                  className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 resize-vertical hover:border-stone-300"
+                  className="w-full px-4 py-3 bg-white/95 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-all duration-200 resize-vertical hover:border-stone-300 text-stone-800 placeholder-stone-500"
                 ></textarea>
 
                 <button

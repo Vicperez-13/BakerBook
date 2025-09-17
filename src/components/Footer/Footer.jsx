@@ -1,8 +1,12 @@
 import React from "react";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const Footer = () => {
+  const [footerRef, footerVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <footer
+      ref={footerRef}
       className="relative py-12"
       style={{
         background:
@@ -11,7 +15,11 @@ const Footer = () => {
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Main Footer Content - Even 4-column layout */}
-        <div className="grid md:grid-cols-4 gap-8 mb-6">
+        <div
+          className={`grid md:grid-cols-4 gap-8 mb-6 transition-all duration-1000 ${
+            footerVisible ? "animate-slide-up" : "animation-hidden"
+          }`}
+        >
           {/* Email Contact */}
           <div>
             <h4 className="text-lg font-bold text-stone-700 mb-4">Email Us</h4>
@@ -124,7 +132,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-3 md:mb-0">
               <p className="text-stone-600 text-sm">
-                © 2024 Ava's Goodies. Made with love and lots of flour.
+                © 2024 Ava's Tweats. Made with love and lots of BUDDDA.
               </p>
               <p className="text-stone-600 text-xs mt-1">
                 All rights reserved • Victor Morales Perez

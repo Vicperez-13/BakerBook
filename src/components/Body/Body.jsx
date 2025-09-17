@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CategoryCard from "./CategoryCard";
-import PastryGallery from "./PastryGallery";
+import SpecialsSection from "./MenuSection";
 import ContactSection from "./ContactSection";
+import {
+  useInitialAnimation,
+  useScrollAnimation,
+} from "../../hooks/useScrollAnimation";
 
 const Body = () => {
   const [visibleNavigators, setVisibleNavigators] = useState({
@@ -10,6 +14,16 @@ const Body = () => {
     afterGallery: false,
     beforeContact: false,
   });
+
+  // Animation states for hero section
+  const imageVisible = useInitialAnimation(300);
+  const quoteVisible = useInitialAnimation(500);
+  const authorVisible = useInitialAnimation(700);
+  const buttonsVisible = useInitialAnimation(900);
+
+  // Scroll animations for main sections
+  const [galleryRef, galleryVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [contactRef, contactVisible] = useScrollAnimation({ threshold: 0.3 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -244,38 +258,44 @@ const Body = () => {
     <>
       <div className="container mx-auto px-4 py-8 pt-32">
         {/* Hero Section with Images and Quote */}
-        <div className="hero-section relative rounded-2xl p-8 mb-12 min-h-[520px] overflow-hidden">
-          {/* Ava Image - Right Side */}
-          <div className="absolute top-12 right-12 z-10">
-            <img
-              src="/src/assets/ava.png"
-              alt="Ava"
-              className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300"
-              style={{
-                borderRadius: "2rem",
-                border: "4px solid rgba(245, 245, 244, 0.8)",
-              }}
-            />
-          </div>
-
-          {/* Quote Section - Centered and balanced */}
-          <div className="flex items-center justify-start min-h-[460px] pl-8 md:pl-16 pr-8 md:pr-16">
-            <div className="max-w-lg md:max-w-xl">
-              <blockquote className="text-xl md:text-2xl font-serif italic text-stone-700 leading-relaxed mb-6">
+        <div className="hero-section relative rounded-2xl px-6 pt-32 pb-16 mb-12 min-h-[85vh] overflow-hidden">
+          {/* Main Content - Side by Side Layout */}
+          <div className="flex items-center justify-between min-h-[75vh] gap-2">
+            {/* Quote Section - Left Side */}
+            <div className="flex-1 max-w-2xl">
+              <blockquote
+                className={`text-lg sm:text-xl md:text-3xl lg:text-4xl font-serif italic text-stone-700 leading-relaxed mb-6 transition-all duration-700 ${
+                  quoteVisible
+                    ? "animate-slide-in-left"
+                    : "animation-hidden-left"
+                }`}
+              >
                 "Baking is love made visible. Every pastry tells a story, every
                 bread carries warmth, and every sweet treat brings joy to those
                 we cherish."
               </blockquote>
-              <div className="text-left mb-8">
-                <p className="text-xl font-semibold text-stone-600">- Ava</p>
-                <p className="text-base text-stone-600">Head Baker & Owner</p>
+              <div
+                className={`text-left mb-8 transition-all duration-700 ${
+                  authorVisible ? "animate-fade-in" : "animation-hidden"
+                }`}
+              >
+                <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-stone-600">
+                  - Ava
+                </p>
+                <p className="text-sm sm:text-base md:text-lg text-stone-600">
+                  Head Baker & Owner
+                </p>
               </div>
 
               {/* Action Buttons - Under the quote */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div
+                className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 ${
+                  buttonsVisible ? "animate-slide-up" : "animation-hidden"
+                }`}
+              >
                 <Link
                   to="/menu"
-                  className="inline-flex items-center justify-center px-8 py-4 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-base"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base md:text-lg"
                   style={{
                     background:
                       "linear-gradient(to right, rgba(120, 93, 75, 0.85), rgba(101, 78, 65, 0.9))",
@@ -283,7 +303,7 @@ const Body = () => {
                 >
                   <span>Explore Our Menu</span>
                   <svg
-                    className="ml-3 w-5 h-5"
+                    className="ml-2 sm:ml-3 md:ml-4 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -299,7 +319,7 @@ const Body = () => {
 
                 <Link
                   to="/about"
-                  className="inline-flex items-center justify-center px-8 py-4 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-base"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-white hover:text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base md:text-lg"
                   style={{
                     background:
                       "linear-gradient(to right, rgba(82, 101, 84, 0.85), rgba(75, 95, 77, 0.9))",
@@ -307,7 +327,7 @@ const Body = () => {
                 >
                   <span>About Ava</span>
                   <svg
-                    className="ml-3 w-5 h-5"
+                    className="ml-2 sm:ml-3 md:ml-4 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -320,6 +340,59 @@ const Body = () => {
                     />
                   </svg>
                 </Link>
+              </div>
+            </div>
+
+            {/* Ava Image - Right Side */}
+            <div
+              className={`flex-shrink-0 transition-all duration-700 ${
+                imageVisible ? "animate-scale-in" : "animation-hidden-scale"
+              }`}
+            >
+              <div className="text-center">
+                <img
+                  src="/src/assets/ava.png"
+                  alt="Ava"
+                  className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 mb-6"
+                  style={{
+                    borderRadius: "2rem",
+                    border: "4px solid rgba(245, 245, 244, 0.8)",
+                  }}
+                />
+                {/* Simple playful quote with nice font */}
+                <div className="space-y-1">
+                  <p
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-600 leading-tight"
+                    style={{ fontFamily: "Comic Neue, cursive" }}
+                  >
+                    Don't stop now—
+                  </p>
+                  <p
+                    className="text-xl sm:text-2xl lg:text-3xl font-semibold text-amber-500 italic"
+                    style={{ fontFamily: "Comic Neue, cursive" }}
+                  >
+                    this dough's got layers
+                  </p>
+                </div>
+                {/* Simple bouncing down arrow */}
+                <div className="mt-8 flex justify-center">
+                  <div className="animate-bounce-down">
+                    <svg
+                      className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -337,8 +410,14 @@ const Body = () => {
       </div>
 
       {/* Pastry Gallery Slideshow - Full Width */}
-      <div id="pastry-gallery">
-        <PastryGallery pastries={pastryImages} />
+      <div
+        id="pastry-gallery"
+        ref={galleryRef}
+        className={`transition-all duration-1000 ${
+          galleryVisible ? "animate-fade-in" : "animation-hidden"
+        }`}
+      >
+        <SpecialsSection />
       </div>
 
       <div className="container mx-auto px-4">
@@ -353,7 +432,14 @@ const Body = () => {
         />
 
         {/* Contact Section */}
-        <ContactSection />
+        <div
+          ref={contactRef}
+          className={`transition-all duration-1000 ${
+            contactVisible ? "animate-slide-up" : "animation-hidden"
+          }`}
+        >
+          <ContactSection />
+        </div>
 
         {/* Navigator: At Bottom - Back to Top */}
         <NavigatorComponent

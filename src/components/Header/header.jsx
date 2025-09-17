@@ -104,7 +104,7 @@ function Header() {
             className="flex items-center text-3xl md:text-4xl font-bold text-green-50 p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white whitespace-nowrap"
           >
             <img
-              src="/src/assets/tabbyCat.png"
+              src="/src/assets/muffin .png"
               alt="Ava's Goodies Logo"
               className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-full mr-4 md:mr-6"
             />
