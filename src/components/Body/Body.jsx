@@ -241,99 +241,103 @@ const Body = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 pt-32">
-      {/* Hero Section with Images and Quote */}
-      <div className="hero-section relative rounded-2xl p-8 mb-12 min-h-[400px] overflow-hidden">
-        {/* Ava Image - Right Side */}
-        <div className="absolute top-8 right-8 z-10">
-          <img
-            src="/src/assets/ava.png"
-            alt="Ava"
-            className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
-          />
-        </div>
+    <>
+      <div className="container mx-auto px-4 py-8 pt-32">
+        {/* Hero Section with Images and Quote */}
+        <div className="hero-section relative rounded-2xl p-8 mb-12 min-h-[400px] overflow-hidden">
+          {/* Ava Image - Right Side */}
+          <div className="absolute top-8 right-8 z-10">
+            <img
+              src="/src/assets/ava.png"
+              alt="Ava"
+              className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
 
-        {/* Quote Section - Centered and balanced */}
-        <div className="flex items-center justify-start min-h-[360px] pl-8 md:pl-16 pr-8 md:pr-16">
-          <div className="max-w-lg md:max-w-xl">
-            <blockquote className="text-xl md:text-2xl font-serif italic text-stone-700 leading-relaxed mb-6">
-              "Baking is love made visible. Every pastry tells a story, every
-              bread carries warmth, and every sweet treat brings joy to those we
-              cherish."
-            </blockquote>
-            <div className="text-left">
-              <p className="text-xl font-semibold text-stone-600">- Ava</p>
-              <p className="text-base text-stone-600">Head Baker & Owner</p>
+          {/* Quote Section - Centered and balanced */}
+          <div className="flex items-center justify-start min-h-[360px] pl-8 md:pl-16 pr-8 md:pr-16">
+            <div className="max-w-lg md:max-w-xl">
+              <blockquote className="text-xl md:text-2xl font-serif italic text-stone-700 leading-relaxed mb-6">
+                "Baking is love made visible. Every pastry tells a story, every
+                bread carries warmth, and every sweet treat brings joy to those
+                we cherish."
+              </blockquote>
+              <div className="text-left">
+                <p className="text-xl font-semibold text-stone-600">- Ava</p>
+                <p className="text-base text-stone-600">Head Baker & Owner</p>
+              </div>
             </div>
+          </div>
+
+          {/* Call to Action Button - Bottom right of hero section */}
+          <div className="absolute bottom-8 right-8 z-10">
+            <Link
+              to="/menu"
+              className="inline-flex items-center px-10 py-5 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg"
+              style={{
+                background:
+                  "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
+              }}
+            >
+              <span>Explore Our Menu</span>
+              <svg
+                className="ml-3 w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
 
-        {/* Call to Action Button - Bottom right of hero section */}
-        <div className="absolute bottom-8 right-8 z-10">
-          <Link
-            to="/menu"
-            className="inline-flex items-center px-10 py-5 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(107, 114, 108, 0.9), rgba(92, 99, 94, 0.95))",
-            }}
-          >
-            <span>Explore Our Menu</span>
-            <svg
-              className="ml-3 w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
-        </div>
+        {/* Navigator: After Hero - Leads to Gallery */}
+        <NavigatorComponent
+          isVisible={visibleNavigators.afterHero}
+          label="Discover Our Pastries"
+          onClick={() => {
+            const gallery = document.querySelector("#pastry-gallery");
+            gallery?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
       </div>
 
-      {/* Navigator: After Hero - Leads to Gallery */}
-      <NavigatorComponent
-        isVisible={visibleNavigators.afterHero}
-        label="Discover Our Pastries"
-        onClick={() => {
-          const gallery = document.querySelector("#pastry-gallery");
-          gallery?.scrollIntoView({ behavior: "smooth" });
-        }}
-      />
-
-      {/* Pastry Gallery Slideshow */}
+      {/* Pastry Gallery Slideshow - Full Width */}
       <div id="pastry-gallery">
         <PastryGallery pastries={pastryImages} />
       </div>
 
-      {/* Navigator: After Gallery - Leads to Contact */}
-      <NavigatorComponent
-        isVisible={visibleNavigators.afterGallery}
-        label="Get In Touch"
-        onClick={() => {
-          const contact = document.querySelector("#contact-section");
-          contact?.scrollIntoView({ behavior: "smooth" });
-        }}
-      />
+      <div className="container mx-auto px-4">
+        {/* Navigator: After Gallery - Leads to Contact */}
+        <NavigatorComponent
+          isVisible={visibleNavigators.afterGallery}
+          label="Get In Touch"
+          onClick={() => {
+            const contact = document.querySelector("#contact-section");
+            contact?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
 
-      {/* Contact Section */}
-      <ContactSection />
+        {/* Contact Section */}
+        <ContactSection />
 
-      {/* Navigator: At Bottom - Back to Top */}
-      <NavigatorComponent
-        isVisible={true}
-        label="Back to Top"
-        arrowDirection="up"
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-      />
-    </div>
+        {/* Navigator: At Bottom - Back to Top */}
+        <NavigatorComponent
+          isVisible={true}
+          label="Back to Top"
+          arrowDirection="up"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        />
+      </div>
+    </>
   );
 };
 

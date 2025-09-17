@@ -3,112 +3,9 @@ import React from "react";
 const ContactSection = () => {
   return (
     <div id="contact-section" className="relative py-16 px-4">
-      <div className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto">
-        {/* Welcoming Header */}
-        <div className="text-center mb-16 relative">
-          <h2 className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            Lets chat: Whether you're dreaming of a custom birthday cake,
-            planning a cozy event, or just want to share how much you loved our
-            croissants - we're all ears!
-            <span className="text-stone-600 font-medium">
-              Every conversation starts with kindness.
-            </span>
-          </h2>
-        </div>
-
-        {/* Contact Methods - Better organized */}
-        <div className="w-full max-w-5xl mb-12">
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Email Contact */}
-            <div className="relative group">
-              <div className="relative bg-stone-50/95 rounded-xl p-6 border border-stone-300 hover:border-stone-400 transition-all duration-300 text-center shadow-md">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-stone-100 rounded-full">
-                    <svg
-                      className="w-8 h-8 text-stone-600"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-stone-600 mb-2">
-                  Email Us
-                </h3>
-                <p className="text-stone-600 text-sm mb-3">
-                  Drop us a line anytime!
-                </p>
-                <a
-                  href="mailto:ava3065@icloud.com"
-                  className="text-stone-700 hover:text-stone-800 transition-colors duration-200 font-medium break-all"
-                >
-                  ava3065@icloud.com
-                </a>
-              </div>
-            </div>
-
-            {/* Response Time */}
-            <div className="relative group">
-              <div className="relative bg-stone-50/95 rounded-xl p-6 border border-stone-300 hover:border-stone-400 transition-all duration-300 text-center shadow-md">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-stone-100 rounded-full">
-                    <img
-                      src="/src/assets/tabbyCat.png"
-                      alt="Quick Response"
-                      className="w-8 h-8 object-cover rounded-full"
-                    />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-stone-600 mb-2">
-                  Quick Response
-                </h3>
-                <p className="text-stone-600 text-sm mb-3">
-                  We're pretty speedy!
-                </p>
-                <p className="text-stone-700 font-medium">
-                  💝 Usually within 24 hours
-                </p>
-              </div>
-            </div>
-
-            {/* Best Times */}
-            <div className="relative group">
-              <div className="relative bg-stone-50/95 rounded-xl p-6 border border-stone-300 hover:border-stone-400 transition-all duration-300 text-center shadow-md">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-stone-100 rounded-full">
-                    <svg
-                      className="w-8 h-8 text-stone-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-stone-600 mb-2">
-                  Best Times
-                </h3>
-                <p className="text-stone-600 text-sm mb-3">
-                  When we're most chatty
-                </p>
-                <p className="text-stone-700 font-medium">
-                  ☀️ Mornings & Afternoons
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Message Form - More welcoming */}
-        <div className="w-full max-w-2xl">
+      <div className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto">
+        {/* Message Form - Share Your Sweet Story */}
+        <div className="w-full">
           <div className="relative group">
             <div className="relative bg-stone-50/95 rounded-2xl p-8 border-2 border-stone-300 hover:border-stone-400 transition-all duration-300 shadow-lg">
               <div className="text-center mb-6">
@@ -193,17 +90,6 @@ const ContactSection = () => {
               </form>
             </div>
           </div>
-        </div>
-
-        {/* Closing Message */}
-        <div className="text-center mt-12">
-          <p className="text-stone-600 italic max-w-md mx-auto">
-            "Every message brings us joy - just like every pastry we bake brings
-            sweetness to your day."
-          </p>
-          <p className="text-stone-600 font-medium mt-2">
-            - The Ava's Goodies Team 🐱
-          </p>
         </div>
       </div>
     </div>

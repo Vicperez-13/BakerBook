@@ -9,24 +9,28 @@ const Footer = () => {
           "linear-gradient(to right, rgba(82, 101, 84, 0.25), rgba(107, 142, 123, 0.20), rgba(75, 95, 77, 0.25))",
       }}
     >
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Main Footer Content - Even 4-column layout */}
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+      <div className="container mx-auto px-4">
+        {/* Contact Methods - Professional Text Layout */}
+        <div className="grid md:grid-cols-3 gap-12 mb-16 text-center">
           {/* Email Contact */}
           <div>
-            <h4 className="text-lg font-bold text-stone-700 mb-4">Email Us</h4>
-            <p className="text-stone-600">ava3065@icloud.com</p>
+            <h3 className="text-xl font-bold text-stone-700 mb-3">Email Us</h3>
+            <p className="text-stone-600 mb-3"> ava3065@icloud.com</p>
           </div>
+        </div>
+
+        {/* Footer Links & Info */}
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold text-stone-700 mb-4">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="/menu"
-                  className="text-stone-600 hover:text-stone-800 transition-colors duration-200"
+                  className="text-stone-600 hover:text-stone-700 transition-colors"
                 >
                   Our Menu
                 </a>
@@ -34,7 +38,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/about"
-                  className="text-stone-600 hover:text-stone-800 transition-colors duration-200"
+                  className="text-stone-600 hover:text-stone-700 transition-colors"
                 >
                   About Ava
                 </a>
@@ -47,21 +51,21 @@ const Footer = () => {
             <h4 className="text-lg font-bold text-stone-700 mb-4">
               Bakery Hours
             </h4>
-            <div className="space-y-2 text-stone-600">
-              <div className="flex justify-between">
+            <ul className="space-y-2 text-sm text-stone-600">
+              <li className="flex justify-between">
                 <span>Monday - Friday</span>
                 <span>6AM - 6PM</span>
-              </div>
-              <div className="flex justify-between">
+              </li>
+              <li className="flex justify-between">
                 <span>Saturday</span>
                 <span>7AM - 5PM</span>
-              </div>
-              <div className="flex justify-between">
+              </li>
+              <li className="flex justify-between">
                 <span>Sunday</span>
                 <span>8AM - 4PM</span>
-              </div>
-            </div>
-            <p className="text-stone-600 mt-3 italic text-sm">
+              </li>
+            </ul>
+            <p className="text-xs text-stone-600 mt-3 italic">
               Fresh pastries available all day!
             </p>
           </div>

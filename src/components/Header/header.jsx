@@ -76,9 +76,12 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <a className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105 cursor-pointer">
+                <Link
+                  to="/about"
+                  className="text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/40 hover:scale-105"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <button
@@ -134,10 +137,13 @@ function Header() {
               </Link>
             </li>
             <li>
-              <a className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group cursor-pointer">
+              <Link
+                to="/about"
+                className="relative px-6 py-3 text-xl text-green-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-emerald-600/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group"
+              >
                 <span className="relative z-10">About</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-700/20 to-green-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
+              </Link>
             </li>
             <li>
               <button

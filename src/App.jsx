@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Menu from "./pages/Menu";
+import About from "./pages/About";
 import CategoryDetail from "./pages/CategoryDetail";
 import "./App.css";
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Body />} />
             <Route path="/home" element={<Body />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/about" element={<About />} />
             <Route path="/menu/:category" element={<CategoryDetail />} />
           </Routes>
         </main>

@@ -10,8 +10,14 @@ const PastryGallery = ({ pastries }) => {
     setCurrent((prev) => (prev === total - 1 ? 0 : prev + 1));
 
   return (
-    <div className="relative py-20 px-4">
-      <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
+    <div
+      className="relative py-20"
+      style={{
+        background:
+          "linear-gradient(to right, rgba(82, 101, 84, 0.15), rgba(107, 142, 123, 0.12), rgba(75, 95, 77, 0.15))",
+      }}
+    >
+      <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto px-4">
         {/* Enhanced Header */}
         <div className="text-center mb-16 relative"></div>
         {/* Main Gallery Section - Three Column Layout */}
