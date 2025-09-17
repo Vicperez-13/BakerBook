@@ -54,15 +54,18 @@ const SpecialsSection = () => {
       className="py-20"
       style={{
         background:
-          "linear-gradient(to right, rgba(82, 101, 84, 0.15), rgba(107, 142, 123, 0.12), rgba(75, 95, 77, 0.15))",
+          "linear-gradient(to right, var(--mocha-latte), var(--mocha-cream), var(--mocha-foam))",
       }}
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Header with Filter Dropdown */}
         <div className="text-center mb-12">
           <h2
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-800 mb-6"
-            style={{ fontFamily: "Comic Neue, cursive" }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6"
+            style={{
+              fontFamily: "Comic Neue, cursive",
+              color: "var(--mocha-text)",
+            }}
           >
             This Month's Specials
           </h2>
@@ -87,7 +90,10 @@ const SpecialsSection = () => {
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
                 {/* Category Badge */}
-                <div className="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div
+                  className="absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-semibold"
+                  style={{ backgroundColor: "var(--mocha-accent)" }}
+                >
                   {item.category}
                 </div>
               </div>
@@ -95,12 +101,18 @@ const SpecialsSection = () => {
               {/* Item Details */}
               <div className="p-6">
                 <h3
-                  className="text-xl font-bold text-stone-800 mb-3"
-                  style={{ fontFamily: "Comic Neue, cursive" }}
+                  className="text-xl font-bold mb-3"
+                  style={{
+                    fontFamily: "Comic Neue, cursive",
+                    color: "var(--mocha-text)",
+                  }}
                 >
                   {item.name}
                 </h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "var(--mocha-text-light)" }}
+                >
                   {item.description}
                 </p>
               </div>
