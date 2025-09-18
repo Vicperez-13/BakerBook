@@ -12,9 +12,10 @@ const Footer = () => {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
-      // Show footer when within 200px of the bottom
+      // Show footer only when very close to the bottom (within 50px)
+      // This prevents it from covering content
       const distanceFromBottom = documentHeight - (scrollTop + windowHeight);
-      setIsNearBottom(distanceFromBottom <= 200);
+      setIsNearBottom(distanceFromBottom <= 50);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
