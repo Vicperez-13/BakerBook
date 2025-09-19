@@ -121,21 +121,25 @@ const About = () => {
                         >
                           <span
                             style={{
-                              float: "left",
-                              fontSize: "1.5rem",
-                              lineHeight: "1",
-                              fontWeight: 700,
-                              marginRight: "0.22rem",
-                              color: "var(--mocha-accent)",
-                              fontFamily: "Georgia, serif",
-                              paddingTop: "0.08em",
+                              textIndent: "1.5em",
+                              display: "block",
                             }}
                           >
-                            H
-                          </span>
-                          <span
-                            style={{ textIndent: "1.5em", display: "block" }}
-                          >
+                            <span
+                              style={{
+                                fontSize: "1.5rem",
+                                lineHeight: "1",
+                                fontWeight: 700,
+                                color: "var(--mocha-accent)",
+                                fontFamily: "Georgia, serif",
+                                verticalAlign: "baseline",
+                                display: "inline",
+                                letterSpacing: "0",
+                                paddingRight: "0.01em",
+                              }}
+                            >
+                              H
+                            </span>
                             i, I’m Ava—the slightly weird, soup-obsessed,
                             sunshine-chasing baker behind Ava’s Goodies. I’ve
                             always been a little bit of a hippy at heart. If I’m
@@ -365,34 +369,23 @@ const About = () => {
               Visit us today and taste the difference that passion and quality
               make in every single bite.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
               <a
                 href="/menu"
-                className="text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors duration-200"
-                style={{ backgroundColor: "var(--mocha-medium)" }}
-                onMouseEnter={(e) =>
-                  (e.target.style.backgroundColor = "var(--mocha-dark)")
-                }
-                onMouseLeave={(e) =>
-                  (e.target.style.backgroundColor = "var(--mocha-medium)")
-                }
+                className="inline-flex items-center justify-center px-8 py-4 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg bg-gradient-to-r from-[var(--mocha-medium)] to-[var(--mocha-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--mocha-medium)] hover:text-white"
+                style={{
+                  fontFamily: "Comic Neue, cursive",
+                  letterSpacing: "0.01em",
+                }}
               >
                 Explore Our Menu
               </a>
               <a
                 href="/#contact"
-                className="border-2 px-8 py-4 rounded-lg text-lg font-medium transition-all duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg bg-gradient-to-r from-[var(--mocha-dark)] to-[var(--mocha-medium)] focus:outline-none focus:ring-2 focus:ring-[var(--mocha-medium)] hover:text-white"
                 style={{
-                  borderColor: "var(--mocha-medium)",
-                  color: "var(--mocha-medium)",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = "var(--mocha-medium)";
-                  e.target.style.color = "white";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = "transparent";
-                  e.target.style.color = "var(--mocha-medium)";
+                  fontFamily: "Comic Neue, cursive",
+                  letterSpacing: "0.01em",
                 }}
               >
                 Get in Touch
