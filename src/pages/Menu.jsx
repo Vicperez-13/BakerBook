@@ -25,6 +25,14 @@ const Menu = () => {
     },
     {
       id: 3,
+      name: "Sugar Cookies",
+      category: "Cookies",
+      image: "/src/assets/sugarC.JPG",
+      description: "Classic sugar cookies with the perfect sweet crunch",
+      price: "$2.25",
+    },
+    {
+      id: 4,
       name: "Artisan Buns",
       category: "Breads",
       image: "/src/assets/buns.JPG",
@@ -32,7 +40,7 @@ const Menu = () => {
       price: "$4.00",
     },
     {
-      id: 4,
+      id: 5,
       name: "Sourdough Bread",
       category: "Breads",
       image: "/src/assets/sour_dough.jpg",
@@ -41,53 +49,13 @@ const Menu = () => {
       price: "$6.50",
     },
     {
-      id: 5,
-      name: "Fresh Sourdough Slice",
-      category: "Breads",
-      image: "/src/assets/sour_dough-knife.jpg",
-      description: "Freshly sliced sourdough bread, ready to enjoy",
-      price: "$1.50",
-    },
-    {
       id: 6,
-      name: "Blueberry Muffins",
-      category: "Muffins",
-      image: "/src/assets/muffin .png",
-      description: "Fluffy muffins bursting with fresh blueberries",
-      price: "$3.25",
-    },
-    // Additional menu items to fill out the menu
-    {
-      id: 7,
-      name: "Banana Nut Muffins",
-      category: "Muffins",
-      image: "/src/assets/muffin .png",
-      description: "Moist banana muffins with crunchy walnuts",
-      price: "$3.25",
-    },
-    {
-      id: 8,
-      name: "Chocolate Croissants",
-      category: "Pastries",
-      image: "/src/assets/buns.JPG",
-      description: "Buttery croissants filled with rich chocolate",
-      price: "$4.50",
-    },
-    {
-      id: 9,
-      name: "Cinnamon Rolls",
-      category: "Pastries",
-      image: "/src/assets/buns.JPG",
-      description: "Warm cinnamon rolls with cream cheese glaze",
-      price: "$4.75",
-    },
-    {
-      id: 10,
-      name: "Apple Pie",
-      category: "Pies",
-      image: "/src/assets/buns.JPG",
-      description: "Classic apple pie with flaky crust and cinnamon spice",
-      price: "$18.00",
+      name: "Crème Brûlée",
+      category: "Desserts",
+      image: "/src/assets/cremeB.JPG",
+      description:
+        "Rich custard topped with a perfectly caramelized sugar crust",
+      price: "$6.75",
     },
   ];
 

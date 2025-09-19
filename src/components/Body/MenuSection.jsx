@@ -19,13 +19,20 @@ const SpecialsSection = () => {
     },
     {
       id: 3,
+      name: "Sugar Cookies",
+      category: "Cookies",
+      image: "/src/assets/sugarC.JPG",
+      description: "Classic sugar cookies with the perfect sweet crunch",
+    },
+    {
+      id: 4,
       name: "Artisan Buns",
       category: "Breads",
       image: "/src/assets/buns.JPG",
       description: "Handcrafted artisan buns, perfect for any meal",
     },
     {
-      id: 4,
+      id: 5,
       name: "Sourdough Bread",
       category: "Breads",
       image: "/src/assets/sour_dough.jpg",
@@ -33,18 +40,12 @@ const SpecialsSection = () => {
         "Traditional sourdough with a perfect crust and tangy flavor",
     },
     {
-      id: 5,
-      name: "Fresh Sourdough Slice",
-      category: "Breads",
-      image: "/src/assets/sour_dough-knife.jpg",
-      description: "Freshly sliced sourdough bread, ready to enjoy",
-    },
-    {
       id: 6,
-      name: "Blueberry Muffins",
-      category: "Muffins",
-      image: "/src/assets/muffin .png",
-      description: "Fluffy muffins bursting with fresh blueberries",
+      name: "Crème Brûlée",
+      category: "Desserts",
+      image: "/src/assets/cremeB.JPG",
+      description:
+        "Rich custard topped with a perfectly caramelized sugar crust",
     },
   ];
 

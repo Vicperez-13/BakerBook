@@ -19,7 +19,7 @@ const About = () => {
             className="text-xl max-w-2xl mx-auto leading-relaxed"
             style={{ color: "var(--mocha-text-light)" }}
           >
-            The heart and soul behind every delightful pastry at Ava's Goodies
+            Proof that butter, sugar, and sass make magic.
           </p>
         </div>
       </section>
@@ -28,52 +28,27 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Baker Photo Placeholder */}
+            {/* Ava's Photo */}
             <div className="order-2 md:order-1">
-              <div
-                className="relative rounded-2xl overflow-hidden shadow-2xl"
-                style={{
-                  background: `linear-gradient(135deg, 
-                    var(--mocha-cream) 0%, 
-                    var(--mocha-latte) 50%, 
-                    var(--mocha-foam) 100%)`,
-                }}
-              >
-                {/* Photo Placeholder - You can replace this with an actual image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/src/assets/AvaWild.jpg"
+                  alt="Ava - Head Baker & Owner"
+                  className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-500"
+                  style={{
+                    filter: "brightness(1.1) contrast(1.05)",
+                  }}
+                />
+                {/* Optional overlay for subtle mocha tint */}
                 <div
-                  className="aspect-[3/4] flex items-center justify-center"
-                  style={{ color: "var(--mocha-text-light)" }}
-                >
-                  <div className="text-center p-8">
-                    <div
-                      className="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: "var(--mocha-cream)" }}
-                    >
-                      <svg
-                        className="w-12 h-12"
-                        style={{ color: "var(--mocha-text-light)" }}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-lg font-medium">Ava's Photo</p>
-                    <p
-                      className="text-sm mt-2"
-                      style={{ color: "var(--mocha-text-light)" }}
-                    >
-                      Photo coming soon! This space is ready for Ava's beautiful
-                      portrait.
-                    </p>
-                  </div>
-                </div>
+                  className="absolute inset-0 opacity-10 pointer-events-none"
+                  style={{
+                    background: `linear-gradient(135deg, 
+                      var(--mocha-cream) 0%, 
+                      transparent 50%, 
+                      var(--mocha-latte) 100%)`,
+                  }}
+                ></div>
               </div>
             </div>
 
