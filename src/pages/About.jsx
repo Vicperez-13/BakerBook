@@ -79,66 +79,93 @@ const About = () => {
                     Ava's Story
                   </h3>
                   <div className="prose prose-stone max-w-none">
-                    <p
-                      className="leading-relaxed mb-4"
-                      style={{ color: "var(--mocha-text-light)" }}
-                    >
-                      This is where Ava's beautiful backstory will live! A space
-                      ready to tell the inspiring journey of how she discovered
-                      her passion for baking and decided to share her delightful
-                      creations with the world.
-                    </p>
-                    <p
-                      className="leading-relaxed mb-4"
-                      style={{ color: "var(--mocha-text-light)" }}
-                    >
-                      Her story of dedication, love for the craft, and the joy
-                      she finds in bringing sweetness to people's lives will be
-                      shared here soon.
-                    </p>
-                    <blockquote
-                      className="border-l-4 pl-6 italic text-lg"
+                    <div
+                      className="mb-4"
                       style={{
-                        borderColor: "var(--mocha-light)",
-                        color: "var(--mocha-text)",
+                        color: "var(--mocha-text-light)",
+                        fontFamily: "Georgia, 'Times New Roman', serif",
+                        textAlign: "justify",
+                        lineHeight: "1.7",
+                        fontSize: "1.04rem",
+                        maxWidth: "100%",
                       }}
                     >
-                      "Baking is love made visible."
-                      <cite
-                        className="block text-base mt-2 not-italic"
-                        style={{ color: "var(--mocha-text-light)" }}
+                      <span
+                        style={{
+                          float: "left",
+                          fontSize: "1.5rem",
+                          lineHeight: "1",
+                          fontWeight: 700,
+                          marginRight: "0.22rem",
+                          color: "var(--mocha-accent)",
+                          fontFamily: "Georgia, serif",
+                          paddingTop: "0.08em",
+                        }}
                       >
-                        - Ava
-                      </cite>
-                    </blockquote>
+                        H
+                      </span>
+                      <span style={{ textIndent: "1.5em", display: "block" }}>
+                        i, I’m Ava—the slightly weird, soup-obsessed,
+                        sunshine-chasing baker behind Ava’s Goodies. I’ve always
+                        been a little bit of a hippy at heart. If I’m not
+                        elbow-deep in dough, you’ll probably find me barefoot in
+                        the garden, talking to my sourdough starter like it’s my
+                        child (his name is Gerald, and yes, he’s temperamental).
+                      </span>
+                      <span
+                        style={{
+                          textIndent: "1.5em",
+                          display: "block",
+                          marginTop: "0.5em",
+                        }}
+                      >
+                        Baking has been my comfort zone since forever—there’s
+                        something magical about mixing up a mess and watching it
+                        turn into something warm, flaky, and full of love. I’m
+                        constantly experimenting with new recipes, usually while
+                        blasting movie soundtracks or quoting lines from
+                        whatever film I just watched for the tenth time.
+                      </span>
+                      <span
+                        style={{
+                          textIndent: "1.5em",
+                          display: "block",
+                          marginTop: "0.5em",
+                        }}
+                      >
+                        I believe soup is a love language—any kind, any time,
+                        any season. If you bring me soup, I’ll probably love you
+                        forever. Summer is my jam. I live for long days,
+                        spontaneous swims, and a little cheeky banter with
+                        friends.
+                      </span>
+                      <span
+                        style={{
+                          textIndent: "1.5em",
+                          display: "block",
+                          marginTop: "0.5em",
+                        }}
+                      >
+                        I started Ava’s Goodies because I wanted to share the
+                        joy I find in baking with others—whether it’s a cookie
+                        that makes you giggle or a loaf that reminds you of
+                        home. Thanks for stopping by. I hope you find something
+                        here that makes your day a little brighter (and
+                        tastier).
+                      </span>
+                      <span
+                        style={{
+                          color: "var(--mocha-accent)",
+                          fontStyle: "italic",
+                          display: "block",
+                          marginTop: "0.5em",
+                          textIndent: "1.5em",
+                        }}
+                      >
+                        Peace, pastries, and good vibes ✌️ —Ava
+                      </span>
+                    </div>
                   </div>
-                </div>
-
-                {/* Philosophy Section */}
-                <div
-                  className="rounded-xl p-8 shadow-lg border"
-                  style={{
-                    background: `linear-gradient(135deg, 
-                      var(--mocha-foam) 0%, 
-                      var(--mocha-latte) 100%)`,
-                    borderColor: "var(--mocha-cream)",
-                  }}
-                >
-                  <h3
-                    className="text-2xl font-semibold mb-4"
-                    style={{ color: "var(--mocha-text)" }}
-                  >
-                    Our Philosophy
-                  </h3>
-                  <p
-                    className="leading-relaxed"
-                    style={{ color: "var(--mocha-text-light)" }}
-                  >
-                    At Ava's Goodies, every pastry is crafted with intention and
-                    care. We believe that the finest ingredients, combined with
-                    passion and traditional techniques, create more than just
-                    desserts—they create moments of joy and connection.
-                  </p>
                 </div>
               </div>
             </div>
