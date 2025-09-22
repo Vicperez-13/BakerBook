@@ -20,7 +20,7 @@ const Contact = () => {
         <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 shadow-lg">
           <h2 className="text-2xl font-bold text-amber-600 mb-6 flex items-center">
             <img
-              src="/src/assets/tabbyCat.png"
+              src="/tabbyCat.png"
               alt="Contact"
               className="w-8 h-8 object-cover rounded-full mr-3"
             />
@@ -213,7 +213,7 @@ const Contact = () => {
       <div className="text-center bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 shadow-lg">
         <div className="flex justify-center mb-4">
           <img
-            src="/src/assets/tabbyCat.png"
+            src="/tabbyCat.png"
             alt="Ava's Bakery"
             className="w-16 h-16 object-cover rounded-full animate-bounce"
           />

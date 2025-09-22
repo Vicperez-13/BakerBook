@@ -70,7 +70,7 @@ const About = () => {
               <div className="order-2 md:order-1">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="/src/assets/AvaWild.jpg"
+                    src="/AvaWild.jpg"
                     alt="Ava - Head Baker & Owner"
                     className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-500"
                     style={{ filter: "brightness(1.1) contrast(1.05)" }}

@@ -78,7 +78,7 @@ const Body = () => {
           >
             {/* Navigation Cat */}
             <img
-              src="/src/assets/tabbyCat.png"
+              src="/tabbyCat.png"
               alt="Navigate to next section"
               className="w-8 h-8 object-cover rounded-full group-hover:rotate-12 transition-transform duration-300"
             />
@@ -247,11 +247,11 @@ const Body = () => {
 
   // Local pastry images from assets (use string paths for Vite)
   const pastryImages = [
-    "/src/assets/buns.JPG",
-    "/src/assets/chocoChips.JPG",
-    "/src/assets/Lemon_cooks.jpg",
-    "/src/assets/sour_dough-knife.jpg",
-    "/src/assets/sour_dough.jpg",
+    "/buns.JPG",
+    "/chocoChips.JPG",
+    "/Lemon_cooks.jpg",
+    "/sour_dough-knife.jpg",
+    "/sour_dough.jpg",
   ];
 
   return (
@@ -358,7 +358,7 @@ const Body = () => {
             >
               <div className="text-center">
                 <img
-                  src="/src/assets/ava.png"
+                  src="/ava.png"
                   alt="Ava"
                   className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 mb-4 md:mb-6 mx-auto"
                   style={{
