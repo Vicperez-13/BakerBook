@@ -54,10 +54,10 @@ function Header() {
             "linear-gradient(to right, rgba(60, 36, 20, 0.9), rgba(93, 58, 34, 0.85), rgba(139, 90, 60, 0.9))",
         }}
       >
-        {/* Mobile Layout: Column on mobile, Row on desktop */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-          {/* Top row: Logo and mobile menu */}
-          <div className="flex justify-between items-center w-full md:w-auto">
+        {/* Mobile Layout: Column on mobile, Controlled grid on tablet/desktop */}
+        <div className="flex flex-col md:grid md:grid-cols-12 md:items-center md:gap-2">
+          {/* Left section: Logo and mobile menu (cols 1-4) */}
+          <div className="flex justify-between items-center w-full md:col-span-4 md:justify-start">
             {/* Mobile menu button */}
             <div className="dropdown md:hidden">
               <div tabIndex={0} role="button" className="btn btn-ghost">
@@ -118,12 +118,12 @@ function Header() {
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center text-2xl md:text-3xl lg:text-4xl font-bold text-amber-50 p-2 md:p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white"
+              className="flex items-center text-xl md:text-2xl lg:text-3xl font-bold text-amber-50 p-2 md:p-3 rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:text-white"
             >
               <img
                 src="/muffin .png"
                 alt="Ava's Goodies Logo"
-                className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover rounded-full mr-2 md:mr-4 lg:mr-6"
+                className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover rounded-full mr-2 md:mr-3 lg:mr-4"
               />
               <span className="groovy-logo">Ava's Tweats</span>
             </Link>
@@ -186,13 +186,13 @@ function Header() {
             </div>
           </div>
 
-          {/* Desktop menu - centered */}
-          <div className="hidden md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-            <ul className="menu menu-horizontal px-1 gap-4">
+          {/* Center section: Desktop menu (cols 5-8) */}
+          <div className="hidden md:flex md:col-span-4 md:justify-center">
+            <ul className="menu menu-horizontal px-1 gap-2 lg:gap-3">
               <li>
                 <Link
                   to="/"
-                  className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
+                  className="relative px-3 md:px-4 lg:px-6 py-3 text-base md:text-lg lg:text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
                 >
                   <span className="relative z-10">Home</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -201,7 +201,7 @@ function Header() {
               <li>
                 <Link
                   to="/menu"
-                  className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:rotate-1 group groovy-logo"
+                  className="relative px-3 md:px-4 lg:px-6 py-3 text-base md:text-lg lg:text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:rotate-1 group groovy-logo"
                 >
                   <span className="relative z-10">Menu</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -210,7 +210,7 @@ function Header() {
               <li>
                 <Link
                   to="/about"
-                  className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
+                  className="relative px-3 md:px-4 lg:px-6 py-3 text-base md:text-lg lg:text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:-rotate-1 group groovy-logo"
                 >
                   <span className="relative z-10">About</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -219,7 +219,7 @@ function Header() {
               <li>
                 <button
                   onClick={handleContactClick}
-                  className="relative px-6 py-3 text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer bg-transparent border-none focus:outline-none focus:bg-amber-800/30 active:bg-amber-800/50 groovy-logo"
+                  className="relative px-3 md:px-4 lg:px-6 py-3 text-base md:text-lg lg:text-xl text-amber-50 font-medium rounded-lg transition-all duration-300 hover:text-white hover:bg-amber-800/30 hover:shadow-md hover:scale-105 hover:rotate-1 group cursor-pointer bg-transparent border-none focus:outline-none focus:bg-amber-800/30 active:bg-amber-800/50 groovy-logo"
                 >
                   <span className="relative z-10">Contact</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-amber-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -228,8 +228,8 @@ function Header() {
             </ul>
           </div>
 
-          {/* Desktop social icons - right side */}
-          <div className="hidden md:flex items-center gap-2">
+          {/* Right section: Desktop social icons (cols 9-12) */}
+          <div className="hidden md:flex md:col-span-4 md:justify-end items-center gap-2">
             <a
               href="https://facebook.com/ava.labrie.39"
               target="_blank"
