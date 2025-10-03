@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const form = useRef();
@@ -9,14 +9,14 @@ const ContactSection = () => {
     user_name: "",
     user_email: "",
     inquiry_type: "",
-    message: ""
+    message: "",
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -32,26 +32,36 @@ const ContactSection = () => {
 
     // Check if EmailJS is configured
     if (!serviceId || !templateId || !publicKey) {
-      setSubmitMessage("🚧 Email service is not configured yet. Please contact us directly!");
+      setSubmitMessage(
+        "🚧 Email service is not configured yet. Please contact us directly!"
+      );
       setIsSubmitting(false);
       return;
     }
 
-    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-      .then((result) => {
-        console.log('Email sent successfully!', result.text);
-        setSubmitMessage("✨ Your sweet message has been sent! We'll get back to you soon!");
-        setFormData({
-          user_name: "",
-          user_email: "",
-          inquiry_type: "",
-          message: ""
-        });
-        form.current.reset();
-      }, (error) => {
-        console.log('Failed to send email:', error.text);
-        setSubmitMessage("😔 Oops! Something went wrong. Please try again or contact us directly.");
-      })
+    emailjs
+      .sendForm(serviceId, templateId, form.current, publicKey)
+      .then(
+        (result) => {
+          console.log("Email sent successfully!", result.text);
+          setSubmitMessage(
+            "✨ Your sweet message has been sent! We'll get back to you soon!"
+          );
+          setFormData({
+            user_name: "",
+            user_email: "",
+            inquiry_type: "",
+            message: "",
+          });
+          form.current.reset();
+        },
+        (error) => {
+          console.log("Failed to send email:", error.text);
+          setSubmitMessage(
+            "😔 Oops! Something went wrong. Please try again or contact us directly."
+          );
+        }
+      )
       .finally(() => {
         setIsSubmitting(false);
       });
@@ -102,9 +112,13 @@ const ContactSection = () => {
 
               <form ref={form} onSubmit={sendEmail} className="space-y-5">
                 {submitMessage && (
-                  <div className={`p-4 rounded-xl text-center font-medium ${
-                    submitMessage.includes('✨') ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                  }`}>
+                  <div
+                    className={`p-4 rounded-xl text-center font-medium ${
+                      submitMessage.includes("✨")
+                        ? "bg-green-100 text-green-800"
+                        : "bg-red-100 text-red-800"
+                    }`}
+                  >
                     {submitMessage}
                   </div>
                 )}
@@ -247,7 +261,7 @@ const ContactSection = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className={`w-full text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center group text-lg ${
-                    isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                    isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                   style={{
                     background:
@@ -255,7 +269,9 @@ const ContactSection = () => {
                   }}
                 >
                   <svg
-                    className={`w-6 h-6 mr-3 ${isSubmitting ? 'animate-spin' : 'group-hover:rotate-12'} transition-transform duration-200`}
+                    className={`w-6 h-6 mr-3 ${
+                      isSubmitting ? "animate-spin" : "group-hover:rotate-12"
+                    } transition-transform duration-200`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -276,7 +292,9 @@ const ContactSection = () => {
                       />
                     )}
                   </svg>
-                  {isSubmitting ? 'Sending Your Sweet Message...' : 'Send Our Sweet Message'}
+                  {isSubmitting
+                    ? "Sending Your Sweet Message..."
+                    : "Send Our Sweet Message"}
                 </button>
               </form>
             </div>

@@ -57,6 +57,7 @@ VITE_EMAILJS_PUBLIC_KEY=user_abcdef123456
 ## Step 6: Template Variables
 
 Make sure your EmailJS template uses these variable names:
+
 - `{{user_name}}` - Customer's name
 - `{{user_email}}` - Customer's email
 - `{{inquiry_type}}` - Type of inquiry selected
@@ -89,6 +90,7 @@ Make sure your EmailJS template uses these variable names:
 ## Free Tier Limits
 
 EmailJS free tier includes:
+
 - 200 emails per month
 - Basic templates
 - Standard support
